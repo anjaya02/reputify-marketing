@@ -48,21 +48,18 @@ export default function Contact() {
   };
 
   return (
-    <section
-      id="contact"
-      className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-white"
-    >
+    <section id="contact" className="py-12 md:py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2
             className="text-3xl md:text-5xl font-bold mb-4 text-balance"
-            style={{ color: "var(--pure-black)" }}
+            style={{ color: "var(--pure-white)" }}
           >
             Get in Touch
           </h2>
           <p
             className="text-lg max-w-2xl mx-auto"
-            style={{ color: "var(--charcoal)" }}
+            style={{ color: "var(--light-gray)" }}
           >
             Have questions? Our team is here to help you get started with
             Reputify
@@ -70,49 +67,52 @@ export default function Contact() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <div className="p-6 rounded-lg border-2 border-gray-200 bg-white hover:border-gray-300 transition-all">
+          <div className="p-6 rounded-lg border-2 border-blue-600/50 bg-gray-900/50 backdrop-blur hover:bg-gray-800/50 transition-all">
             <div
               className="w-12 h-12 rounded-lg flex items-center justify-center mb-4"
-              style={{ backgroundColor: "rgba(30, 58, 138, 0.1)" }}
+              style={{ backgroundColor: "rgba(59, 130, 246, 0.2)" }}
             >
-              <Mail className="w-6 h-6" style={{ color: "var(--navy-blue)" }} />
-            </div>
-            <h3
-              className="font-bold mb-2"
-              style={{ color: "var(--pure-black)" }}
-            >
-              Email
-            </h3>
-            <p className="text-sm" style={{ color: "var(--charcoal)" }}>
-              info@reputify.lk
-            </p>
-          </div>
-
-          <div className="p-6 rounded-lg border-2 border-gray-200 bg-white hover:border-gray-300 transition-all">
-            <div
-              className="w-12 h-12 rounded-lg flex items-center justify-center mb-4"
-              style={{ backgroundColor: "rgba(59, 130, 246, 0.1)" }}
-            >
-              <Phone
+              <Mail
                 className="w-6 h-6"
-                style={{ color: "var(--royal-blue)" }}
+                style={{ color: "var(--light-blue)" }}
               />
             </div>
             <h3
               className="font-bold mb-2"
-              style={{ color: "var(--pure-black)" }}
+              style={{ color: "var(--pure-white)" }}
+            >
+              Email
+            </h3>
+            <p className="text-sm" style={{ color: "var(--light-gray)" }}>
+              info@reputify.lk
+            </p>
+          </div>
+
+          <div className="p-6 rounded-lg border-2 border-blue-600/50 bg-gray-900/50 backdrop-blur hover:bg-gray-800/50 transition-all">
+            <div
+              className="w-12 h-12 rounded-lg flex items-center justify-center mb-4"
+              style={{ backgroundColor: "rgba(59, 130, 246, 0.2)" }}
+            >
+              <Phone
+                className="w-6 h-6"
+                style={{ color: "var(--light-blue)" }}
+              />
+            </div>
+            <h3
+              className="font-bold mb-2"
+              style={{ color: "var(--pure-white)" }}
             >
               WhatsApp
             </h3>
-            <p className="text-sm" style={{ color: "var(--charcoal)" }}>
+            <p className="text-sm" style={{ color: "var(--light-gray)" }}>
               +94 711687980
             </p>
           </div>
 
-          <div className="p-6 rounded-lg border-2 border-gray-200 bg-white hover:border-gray-300 transition-all">
+          <div className="p-6 rounded-lg border-2 border-blue-600/50 bg-gray-900/50 backdrop-blur hover:bg-gray-800/50 transition-all">
             <div
               className="w-12 h-12 rounded-lg flex items-center justify-center mb-4"
-              style={{ backgroundColor: "rgba(147, 197, 253, 0.1)" }}
+              style={{ backgroundColor: "rgba(59, 130, 246, 0.2)" }}
             >
               <MapPin
                 className="w-6 h-6"
@@ -121,11 +121,11 @@ export default function Contact() {
             </div>
             <h3
               className="font-bold mb-2"
-              style={{ color: "var(--pure-black)" }}
+              style={{ color: "var(--pure-white)" }}
             >
               Office
             </h3>
-            <p className="text-sm" style={{ color: "var(--charcoal)" }}>
+            <p className="text-sm" style={{ color: "var(--light-gray)" }}>
               Colombo, Sri Lanka
             </p>
           </div>
@@ -139,7 +139,7 @@ export default function Contact() {
                 <label
                   htmlFor="name"
                   className="block text-sm font-medium mb-2"
-                  style={{ color: "var(--pure-black)" }}
+                  style={{ color: "var(--pure-white)" }}
                 >
                   Full Name
                 </label>
@@ -150,9 +150,9 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 rounded-lg border-2 border-gray-200 bg-white focus:outline-none focus:ring-2 focus:ring-offset-0 transition-all focus:border-blue-600"
+                  className="w-full px-4 py-2 rounded-lg border-2 border-gray-600 bg-gray-800/50 backdrop-blur focus:outline-none focus:ring-2 focus:ring-offset-0 transition-all focus:border-blue-500"
                   style={{
-                    color: "var(--pure-black)",
+                    color: "var(--pure-white)",
                   }}
                   placeholder="Your name"
                 />
@@ -162,7 +162,7 @@ export default function Contact() {
                 <label
                   htmlFor="businessType"
                   className="block text-sm font-medium mb-2"
-                  style={{ color: "var(--pure-black)" }}
+                  style={{ color: "var(--pure-white)" }}
                 >
                   Business Type
                 </label>
@@ -172,8 +172,8 @@ export default function Contact() {
                   value={formData.businessType}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 rounded-lg border-2 border-gray-200 bg-white focus:outline-none focus:ring-2 transition-all"
-                  style={{ color: "var(--pure-black)" }}
+                  className="w-full px-4 py-2 rounded-lg border-2 border-gray-600 bg-gray-800/50 backdrop-blur focus:outline-none focus:ring-2 transition-all focus:border-blue-500"
+                  style={{ color: "var(--pure-white)" }}
                 >
                   <option value="">Select your business type</option>
                   <option value="cafe">Cafe/Restaurant</option>
@@ -188,7 +188,7 @@ export default function Contact() {
                 <label
                   htmlFor="email"
                   className="block text-sm font-medium mb-2"
-                  style={{ color: "var(--pure-black)" }}
+                  style={{ color: "var(--pure-white)" }}
                 >
                   Email Address
                 </label>
@@ -199,8 +199,8 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 rounded-lg border-2 border-gray-200 bg-white focus:outline-none focus:ring-2 transition-all"
-                  style={{ color: "var(--pure-black)" }}
+                  className="w-full px-4 py-2 rounded-lg border-2 border-gray-600 bg-gray-800/50 backdrop-blur focus:outline-none focus:ring-2 transition-all focus:border-blue-500"
+                  style={{ color: "var(--pure-white)" }}
                   placeholder="your@email.com"
                 />
               </div>
@@ -209,7 +209,7 @@ export default function Contact() {
                 <label
                   htmlFor="phone"
                   className="block text-sm font-medium mb-2"
-                  style={{ color: "var(--pure-black)" }}
+                  style={{ color: "var(--pure-white)" }}
                 >
                   Phone Number
                 </label>
@@ -219,8 +219,8 @@ export default function Contact() {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 rounded-lg border-2 border-gray-200 bg-white focus:outline-none focus:ring-2 transition-all"
-                  style={{ color: "var(--pure-black)" }}
+                  className="w-full px-4 py-2 rounded-lg border-2 border-gray-600 bg-gray-800/50 backdrop-blur focus:outline-none focus:ring-2 transition-all focus:border-blue-500"
+                  style={{ color: "var(--pure-white)" }}
                   placeholder="+94 XX XXX XXXX"
                 />
               </div>
@@ -229,7 +229,7 @@ export default function Contact() {
                 <label
                   htmlFor="message"
                   className="block text-sm font-medium mb-2"
-                  style={{ color: "var(--pure-black)" }}
+                  style={{ color: "var(--pure-white)" }}
                 >
                   Message
                 </label>
@@ -240,8 +240,8 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   rows={4}
-                  className="w-full px-4 py-2 rounded-lg border-2 border-gray-200 bg-white focus:outline-none focus:ring-2 transition-all resize-none"
-                  style={{ color: "var(--pure-black)" }}
+                  className="w-full px-4 py-2 rounded-lg border-2 border-gray-600 bg-gray-800/50 backdrop-blur focus:outline-none focus:ring-2 transition-all resize-none focus:border-blue-500"
+                  style={{ color: "var(--pure-white)" }}
                   placeholder="Tell us about your business and how we can help..."
                 />
               </div>
@@ -276,28 +276,28 @@ export default function Contact() {
             <div>
               <h3
                 className="text-2xl font-bold mb-4"
-                style={{ color: "var(--pure-black)" }}
+                style={{ color: "var(--pure-white)" }}
               >
                 Business Hours
               </h3>
-              <div className="flex gap-4 p-6 rounded-lg border-2 border-gray-200 bg-white">
+              <div className="flex gap-4 p-6 rounded-lg border-2 border-blue-600/50 bg-gray-900/50 backdrop-blur">
                 <Clock
                   className="w-6 h-6 flex-shrink-0 mt-1"
-                  style={{ color: "var(--navy-blue)" }}
+                  style={{ color: "var(--light-blue)" }}
                 />
                 <div>
                   <p
                     className="font-medium"
-                    style={{ color: "var(--pure-black)" }}
+                    style={{ color: "var(--pure-white)" }}
                   >
                     Monday - Friday
                   </p>
-                  <p style={{ color: "var(--charcoal)" }}>
+                  <p style={{ color: "var(--light-gray)" }}>
                     9:00 AM - 6:00 PM (Sri Lankan Time)
                   </p>
                   <p
                     className="text-sm mt-2"
-                    style={{ color: "var(--charcoal)" }}
+                    style={{ color: "var(--light-gray)" }}
                   >
                     We respond to inquiries within 24 hours
                   </p>
@@ -308,7 +308,7 @@ export default function Contact() {
             <div>
               <h3
                 className="text-2xl font-bold mb-4"
-                style={{ color: "var(--pure-black)" }}
+                style={{ color: "var(--pure-white)" }}
               >
                 Why Contact Us?
               </h3>
@@ -316,44 +316,44 @@ export default function Contact() {
                 <li className="flex gap-3">
                   <span
                     className="font-bold"
-                    style={{ color: "var(--navy-blue)" }}
+                    style={{ color: "var(--light-blue)" }}
                   >
                     ✓
                   </span>
-                  <span style={{ color: "var(--charcoal)" }}>
+                  <span style={{ color: "var(--pure-white)" }}>
                     Get a personalized demo tailored to your business
                   </span>
                 </li>
                 <li className="flex gap-3">
                   <span
                     className="font-bold"
-                    style={{ color: "var(--navy-blue)" }}
+                    style={{ color: "var(--light-blue)" }}
                   >
                     ✓
                   </span>
-                  <span style={{ color: "var(--charcoal)" }}>
+                  <span style={{ color: "var(--pure-white)" }}>
                     Discuss custom integration options
                   </span>
                 </li>
                 <li className="flex gap-3">
                   <span
                     className="font-bold"
-                    style={{ color: "var(--navy-blue)" }}
+                    style={{ color: "var(--light-blue)" }}
                   >
                     ✓
                   </span>
-                  <span style={{ color: "var(--charcoal)" }}>
+                  <span style={{ color: "var(--pure-white)" }}>
                     Learn about special pricing for bulk users
                   </span>
                 </li>
                 <li className="flex gap-3">
                   <span
                     className="font-bold"
-                    style={{ color: "var(--navy-blue)" }}
+                    style={{ color: "var(--light-blue)" }}
                   >
                     ✓
                   </span>
-                  <span style={{ color: "var(--charcoal)" }}>
+                  <span style={{ color: "var(--pure-white)" }}>
                     Get expert advice on reputation management
                   </span>
                 </li>

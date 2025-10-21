@@ -29,18 +29,18 @@ const testimonials = [
 
 export default function SocialProof() {
   return (
-    <section className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-white">
+    <section className="py-12 md:py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2
             className="text-3xl md:text-5xl font-bold mb-4 text-balance"
-            style={{ color: "var(--pure-black)" }}
+            style={{ color: "var(--pure-white)" }}
           >
             Trusted by 50+ Sri Lankan Businesses
           </h2>
           <p
             className="text-lg max-w-2xl mx-auto"
-            style={{ color: "var(--charcoal)" }}
+            style={{ color: "var(--light-gray)" }}
           >
             See how businesses across different industries are transforming
             their reputation management
@@ -49,34 +49,34 @@ export default function SocialProof() {
 
         {/* Stats */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <div className="text-center p-6 rounded-lg border-2 border-gray-200 bg-white">
+          <div className="text-center p-6 rounded-lg border-2 border-blue-600/50 bg-gray-900/50 backdrop-blur">
             <div
               className="text-4xl font-bold mb-2"
-              style={{ color: "var(--dark-forest-green)" }}
+              style={{ color: "var(--light-blue)" }}
             >
               50+
             </div>
-            <p style={{ color: "var(--charcoal)" }}>Active Businesses</p>
+            <p style={{ color: "var(--light-gray)" }}>Active Businesses</p>
           </div>
-          <div className="text-center p-6 rounded-lg border-2 border-gray-200 bg-white">
+          <div className="text-center p-6 rounded-lg border-2 border-blue-600/50 bg-gray-900/50 backdrop-blur">
             <div
               className="text-4xl font-bold mb-2"
-              style={{ color: "var(--emerald-accent)" }}
+              style={{ color: "var(--light-blue)" }}
             >
               30%
             </div>
-            <p style={{ color: "var(--charcoal)" }}>
+            <p style={{ color: "var(--light-gray)" }}>
               Avg. Satisfaction Improvement
             </p>
           </div>
-          <div className="text-center p-6 rounded-lg border-2 border-gray-200 bg-white">
+          <div className="text-center p-6 rounded-lg border-2 border-blue-600/50 bg-gray-900/50 backdrop-blur">
             <div
               className="text-4xl font-bold mb-2"
-              style={{ color: "var(--sage-green)" }}
+              style={{ color: "var(--light-blue)" }}
             >
               4.8/5
             </div>
-            <p style={{ color: "var(--charcoal)" }}>Average Rating</p>
+            <p style={{ color: "var(--light-gray)" }}>Average Rating</p>
           </div>
         </div>
 
@@ -85,7 +85,7 @@ export default function SocialProof() {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="p-8 rounded-lg border-2 border-gray-200 bg-white hover:border-gray-300 transition-all duration-300"
+              className="p-8 rounded-lg border-2 border-blue-600/50 bg-gray-900/50 backdrop-blur hover:bg-gray-800/50 transition-all duration-300"
             >
               <div className="flex gap-1 mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
@@ -97,18 +97,18 @@ export default function SocialProof() {
               </div>
               <p
                 className="mb-6 leading-relaxed"
-                style={{ color: "var(--pure-black)" }}
+                style={{ color: "var(--pure-white)" }}
               >
                 {testimonial.content}
               </p>
-              <div className="border-t border-gray-200 pt-4">
-                <p className="font-bold" style={{ color: "var(--pure-black)" }}>
+              <div className="border-t border-gray-600 pt-4">
+                <p className="font-bold" style={{ color: "var(--pure-white)" }}>
                   {testimonial.name}
                 </p>
-                <p className="text-sm" style={{ color: "var(--charcoal)" }}>
+                <p className="text-sm" style={{ color: "var(--light-gray)" }}>
                   {testimonial.business}
                 </p>
-                <p className="text-xs" style={{ color: "var(--charcoal)" }}>
+                <p className="text-xs" style={{ color: "var(--light-gray)" }}>
                   {testimonial.role}
                 </p>
               </div>

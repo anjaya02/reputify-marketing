@@ -117,21 +117,18 @@ export default function Pricing() {
   const [showComparison, setShowComparison] = useState(false);
 
   return (
-    <section
-      id="pricing"
-      className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-white"
-    >
+    <section id="pricing" className="py-12 md:py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2
             className="text-3xl md:text-5xl font-bold mb-4 text-balance"
-            style={{ color: "var(--pure-black)" }}
+            style={{ color: "var(--pure-white)" }}
           >
-            Simple, Transparent Pricing
+            Choose Your Plan
           </h2>
           <p
             className="text-lg max-w-2xl mx-auto"
-            style={{ color: "var(--charcoal)" }}
+            style={{ color: "var(--light-gray)" }}
           >
             All plans include free 14-day trial, no credit card required, and
             cancel anytime
@@ -147,38 +144,43 @@ export default function Pricing() {
                 plan.highlighted ? "scale-105 shadow-lg" : "hover:shadow-md"
               }`}
               style={{
-                borderColor: plan.highlighted ? "var(--navy-blue)" : "#E5E7EB",
+                borderColor: plan.highlighted
+                  ? "var(--royal-blue)"
+                  : "rgba(59, 130, 246, 0.5)",
                 backgroundColor: plan.highlighted
-                  ? "rgba(30, 58, 138, 0.05)"
-                  : "white",
+                  ? "rgba(30, 58, 138, 0.2)"
+                  : "rgba(17, 24, 39, 0.5)",
               }}
             >
               {plan.highlighted && (
                 <div
                   className="inline-block mb-4 px-3 py-1 text-xs font-bold rounded-full text-white"
-                  style={{ backgroundColor: "var(--navy-blue)" }}
+                  style={{ backgroundColor: "var(--royal-blue)" }}
                 >
                   MOST POPULAR
                 </div>
               )}
               <h3
                 className="text-2xl font-bold mb-2"
-                style={{ color: "var(--pure-black)" }}
+                style={{ color: "var(--pure-white)" }}
               >
                 {plan.name}
               </h3>
-              <p className="text-sm mb-6" style={{ color: "var(--charcoal)" }}>
+              <p
+                className="text-sm mb-6"
+                style={{ color: "var(--light-gray)" }}
+              >
                 {plan.description}
               </p>
 
               <div className="mb-6">
                 <span
                   className="text-4xl font-bold"
-                  style={{ color: "var(--pure-black)" }}
+                  style={{ color: "var(--pure-white)" }}
                 >
                   LKR {plan.price}
                 </span>
-                <span style={{ color: "var(--charcoal)" }}>/month</span>
+                <span style={{ color: "var(--light-gray)" }}>/month</span>
               </div>
 
               <Button
@@ -207,7 +209,7 @@ export default function Pricing() {
                     />
                     <span
                       className="text-sm"
-                      style={{ color: "var(--pure-black)" }}
+                      style={{ color: "var(--pure-white)" }}
                     >
                       {feature}
                     </span>
@@ -220,7 +222,7 @@ export default function Pricing() {
 
         {/* Trial Info */}
         <div className="text-center mb-12">
-          <p style={{ color: "var(--charcoal)" }}>
+          <p style={{ color: "var(--light-gray)" }}>
             Free 14-day trial • No credit card required • Cancel anytime • Full
             access to all features
           </p>
@@ -230,10 +232,11 @@ export default function Pricing() {
         <div className="text-center mb-8">
           <button
             onClick={() => setShowComparison(!showComparison)}
-            className="font-medium transition-colors hover:opacity-80 px-4 py-2 border rounded-lg hover:bg-gray-50 cursor-pointer"
+            className="font-medium transition-colors hover:opacity-80 px-4 py-2 border rounded-lg hover:bg-gray-800/50 cursor-pointer"
             style={{
-              color: "var(--navy-blue)",
-              borderColor: "var(--navy-blue)",
+              color: "var(--pure-white)",
+              borderColor: "var(--royal-blue)",
+              backgroundColor: "rgba(17, 24, 39, 0.3)",
             }}
             type="button"
           >
@@ -245,35 +248,35 @@ export default function Pricing() {
         {showComparison && (
           <div
             className="overflow-x-auto rounded-lg border-2"
-            style={{ borderColor: "#E5E7EB" }}
+            style={{ borderColor: "rgba(59, 130, 246, 0.5)" }}
           >
-            <table className="w-full">
+            <table className="w-full bg-gray-900/50 backdrop-blur">
               <thead>
                 <tr
-                  className="border-b-2 border-gray-200"
-                  style={{ backgroundColor: "#F9FAFB" }}
+                  className="border-b-2 border-gray-700"
+                  style={{ backgroundColor: "rgba(17, 24, 39, 0.7)" }}
                 >
                   <th
                     className="px-6 py-4 text-left font-bold"
-                    style={{ color: "var(--pure-black)" }}
+                    style={{ color: "var(--pure-white)" }}
                   >
                     Feature
                   </th>
                   <th
                     className="px-6 py-4 text-center font-bold"
-                    style={{ color: "var(--pure-black)" }}
+                    style={{ color: "var(--pure-white)" }}
                   >
                     Starter
                   </th>
                   <th
                     className="px-6 py-4 text-center font-bold"
-                    style={{ color: "var(--pure-black)" }}
+                    style={{ color: "var(--pure-white)" }}
                   >
                     Professional
                   </th>
                   <th
                     className="px-6 py-4 text-center font-bold"
-                    style={{ color: "var(--pure-black)" }}
+                    style={{ color: "var(--pure-white)" }}
                   >
                     Business
                   </th>
@@ -283,11 +286,11 @@ export default function Pricing() {
                 {comparisonFeatures.map((feature, index) => (
                   <tr
                     key={index}
-                    className="border-b border-gray-200 hover:opacity-80 transition-opacity"
+                    className="border-b border-gray-700 hover:bg-gray-800/30 transition-all"
                   >
                     <td
                       className="px-6 py-4 font-medium"
-                      style={{ color: "var(--pure-black)" }}
+                      style={{ color: "var(--pure-white)" }}
                     >
                       {feature.name}
                     </td>
@@ -301,11 +304,11 @@ export default function Pricing() {
                         ) : (
                           <X
                             className="w-5 h-5 mx-auto"
-                            style={{ color: "var(--charcoal)" }}
+                            style={{ color: "var(--light-gray)" }}
                           />
                         )
                       ) : (
-                        <span style={{ color: "var(--charcoal)" }}>
+                        <span style={{ color: "var(--light-gray)" }}>
                           {feature.starter}
                         </span>
                       )}
@@ -320,11 +323,11 @@ export default function Pricing() {
                         ) : (
                           <X
                             className="w-5 h-5 mx-auto"
-                            style={{ color: "var(--charcoal)" }}
+                            style={{ color: "var(--light-gray)" }}
                           />
                         )
                       ) : (
-                        <span style={{ color: "var(--charcoal)" }}>
+                        <span style={{ color: "var(--light-gray)" }}>
                           {feature.professional}
                         </span>
                       )}
@@ -339,11 +342,11 @@ export default function Pricing() {
                         ) : (
                           <X
                             className="w-5 h-5 mx-auto"
-                            style={{ color: "var(--charcoal)" }}
+                            style={{ color: "var(--light-gray)" }}
                           />
                         )
                       ) : (
-                        <span style={{ color: "var(--charcoal)" }}>
+                        <span style={{ color: "var(--light-gray)" }}>
                           {feature.business}
                         </span>
                       )}

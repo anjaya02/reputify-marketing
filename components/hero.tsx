@@ -11,7 +11,7 @@ export default function Hero() {
 
   return (
     <>
-      <section className="relative py-12 md:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-white">
+      <section className="relative py-12 md:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="absolute inset-0 -z-10">
           <div
             className="absolute top-0 right-0 w-96 h-96 rounded-full blur-3xl opacity-10"
@@ -41,14 +41,14 @@ export default function Hero() {
 
           <h1
             className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-balance"
-            style={{ color: "var(--pure-black)" }}
+            style={{ color: "var(--pure-white)" }}
           >
             Listen Smarter. Respond Faster.
           </h1>
 
           <p
             className="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-balance"
-            style={{ color: "var(--charcoal)" }}
+            style={{ color: "var(--light-gray)" }}
           >
             AI-powered reputation management for Sri Lankan businesses. Monitor
             reviews across 5 platforms in Sinhala, Tamil & English.

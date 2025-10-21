@@ -1,21 +1,28 @@
 export default function PlatformIcons() {
   const platforms = [
-    { name: "Google", color: "bg-blue-50 border-blue-200" },
-    { name: "Facebook", color: "bg-blue-50 border-blue-200" },
-    { name: "LinkedIn", color: "bg-blue-50 border-blue-200" },
-    { name: "YouTube", color: "bg-red-50 border-red-200" },
-    { name: "Reddit", color: "bg-orange-50 border-orange-200" },
-  ]
+    { name: "Google", color: "bg-gray-900/40 border-blue-500/50" },
+    { name: "Facebook", color: "bg-gray-900/40 border-blue-500/50" },
+    { name: "LinkedIn", color: "bg-gray-900/40 border-blue-500/50" },
+    { name: "YouTube", color: "bg-gray-900/40 border-red-500/50" },
+    { name: "Reddit", color: "bg-gray-900/40 border-orange-500/50" },
+  ];
 
   return (
-    <section className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-white">
+    <section className="py-20 md:py-32 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-balance" style={{ color: "var(--pure-black)" }}>
+          <h2
+            className="text-3xl md:text-5xl font-bold mb-4 text-balance"
+            style={{ color: "var(--pure-white)" }}
+          >
             One Dashboard. All Platforms. Complete Visibility.
           </h2>
-          <p className="text-lg max-w-2xl mx-auto" style={{ color: "var(--charcoal)" }}>
-            Monitor all your reviews and mentions across the platforms your customers use most
+          <p
+            className="text-lg max-w-2xl mx-auto"
+            style={{ color: "var(--light-gray)" }}
+          >
+            Monitor all your reviews and mentions across the platforms your
+            customers use most
           </p>
         </div>
 
@@ -23,68 +30,98 @@ export default function PlatformIcons() {
           {platforms.map((platform, index) => (
             <div
               key={index}
-              className={`p-8 rounded-lg border-2 ${platform.color} flex items-center justify-center hover:shadow-lg transition-all duration-300 hover:scale-105`}
+              className={`p-8 rounded-lg border-2 ${platform.color} backdrop-blur flex items-center justify-center hover:shadow-lg transition-all duration-300 hover:scale-105`}
             >
-              <span className="font-bold text-center" style={{ color: "var(--pure-black)" }}>
+              <span
+                className="font-bold text-center"
+                style={{ color: "var(--pure-white)" }}
+              >
                 {platform.name}
               </span>
             </div>
           ))}
         </div>
 
-        <div className="mt-16 p-8 rounded-lg border-2 border-gray-200 bg-white">
-          <h3 className="text-2xl font-bold mb-4" style={{ color: "var(--pure-black)" }}>
+        <div className="mt-16 p-8 rounded-lg border-2 border-blue-600/50 bg-gray-900/50 backdrop-blur">
+          <h3
+            className="text-2xl font-bold mb-4"
+            style={{ color: "var(--pure-white)" }}
+          >
             Why Monitor Multiple Platforms?
           </h3>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="flex gap-4">
-              <span className="font-bold text-xl" style={{ color: "var(--dark-forest-green)" }}>
+              <span
+                className="font-bold text-xl"
+                style={{ color: "var(--light-blue)" }}
+              >
                 1
               </span>
               <div>
-                <p className="font-medium" style={{ color: "var(--pure-black)" }}>
+                <p
+                  className="font-medium"
+                  style={{ color: "var(--pure-white)" }}
+                >
                   Customers are everywhere
                 </p>
-                <p className="text-sm" style={{ color: "var(--charcoal)" }}>
+                <p className="text-sm" style={{ color: "var(--light-gray)" }}>
                   Your customers leave reviews on different platforms
                 </p>
               </div>
             </div>
             <div className="flex gap-4">
-              <span className="font-bold text-xl" style={{ color: "var(--dark-forest-green)" }}>
+              <span
+                className="font-bold text-xl"
+                style={{ color: "var(--light-blue)" }}
+              >
                 2
               </span>
               <div>
-                <p className="font-medium" style={{ color: "var(--pure-black)" }}>
+                <p
+                  className="font-medium"
+                  style={{ color: "var(--pure-white)" }}
+                >
                   Don't miss feedback
                 </p>
-                <p className="text-sm" style={{ color: "var(--charcoal)" }}>
+                <p className="text-sm" style={{ color: "var(--light-gray)" }}>
                   Unified dashboard means no reviews slip through the cracks
                 </p>
               </div>
             </div>
             <div className="flex gap-4">
-              <span className="font-bold text-xl" style={{ color: "var(--dark-forest-green)" }}>
+              <span
+                className="font-bold text-xl"
+                style={{ color: "var(--light-blue)" }}
+              >
                 3
               </span>
               <div>
-                <p className="font-medium" style={{ color: "var(--pure-black)" }}>
+                <p
+                  className="font-medium"
+                  style={{ color: "var(--pure-white)" }}
+                >
                   Respond faster
                 </p>
-                <p className="text-sm" style={{ color: "var(--charcoal)" }}>
+                <p className="text-sm" style={{ color: "var(--light-gray)" }}>
                   Centralized alerts help you respond to feedback immediately
                 </p>
               </div>
             </div>
             <div className="flex gap-4">
-              <span className="font-bold text-xl" style={{ color: "var(--dark-forest-green)" }}>
+              <span
+                className="font-bold text-xl"
+                style={{ color: "var(--light-blue)" }}
+              >
                 4
               </span>
               <div>
-                <p className="font-medium" style={{ color: "var(--pure-black)" }}>
+                <p
+                  className="font-medium"
+                  style={{ color: "var(--pure-white)" }}
+                >
                   Better insights
                 </p>
-                <p className="text-sm" style={{ color: "var(--charcoal)" }}>
+                <p className="text-sm" style={{ color: "var(--light-gray)" }}>
                   Cross-platform analytics reveal trends and patterns
                 </p>
               </div>
@@ -93,5 +130,5 @@ export default function PlatformIcons() {
         </div>
       </div>
     </section>
-  )
+  );
 }

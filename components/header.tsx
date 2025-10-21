@@ -33,12 +33,12 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 border-b border-gray-200 shadow-sm">
+    <header className="sticky top-0 z-50 bg-black/95 backdrop-blur supports-[backdrop-filter]:bg-black/80 border-b border-gray-800 shadow-sm">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
         <Link
           href="/"
           className="flex items-center gap-2 font-bold text-xl transition-colors"
-          style={{ color: "var(--navy-blue)" }}
+          style={{ color: "var(--pure-white)" }}
         >
           <Shield className="w-6 h-6" />
           Reputify
@@ -50,7 +50,7 @@ export default function Header() {
             href="#features"
             onClick={(e) => handleNavClick(e, "#features")}
             className="font-medium transition-colors hover:opacity-80"
-            style={{ color: "var(--charcoal)" }}
+            style={{ color: "var(--pure-white)" }}
           >
             Features
           </Link>
@@ -58,7 +58,7 @@ export default function Header() {
             href="#pricing"
             onClick={(e) => handleNavClick(e, "#pricing")}
             className="font-medium transition-colors hover:opacity-80"
-            style={{ color: "var(--charcoal)" }}
+            style={{ color: "var(--pure-white)" }}
           >
             Pricing
           </Link>
@@ -66,7 +66,7 @@ export default function Header() {
             href="#about"
             onClick={(e) => handleNavClick(e, "#about")}
             className="font-medium transition-colors hover:opacity-80"
-            style={{ color: "var(--charcoal)" }}
+            style={{ color: "var(--pure-white)" }}
           >
             About
           </Link>
@@ -74,7 +74,7 @@ export default function Header() {
             href="#contact"
             onClick={(e) => handleNavClick(e, "#contact")}
             className="font-medium transition-colors hover:opacity-80"
-            style={{ color: "var(--charcoal)" }}
+            style={{ color: "var(--pure-white)" }}
           >
             Contact
           </Link>
@@ -104,7 +104,7 @@ export default function Header() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden"
+          className="md:hidden text-white"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
@@ -114,13 +114,13 @@ export default function Header() {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden border-t border-gray-200 bg-white">
+        <div className="md:hidden border-t border-gray-800 bg-black/95">
           <div className="px-4 py-4 space-y-3">
             <Link
               href="#features"
               onClick={(e) => handleNavClick(e, "#features")}
               className="block font-medium transition-colors hover:opacity-80"
-              style={{ color: "var(--charcoal)" }}
+              style={{ color: "var(--pure-white)" }}
             >
               Features
             </Link>
@@ -128,7 +128,7 @@ export default function Header() {
               href="#pricing"
               onClick={(e) => handleNavClick(e, "#pricing")}
               className="block font-medium transition-colors hover:opacity-80"
-              style={{ color: "var(--charcoal)" }}
+              style={{ color: "var(--pure-white)" }}
             >
               Pricing
             </Link>
@@ -136,7 +136,7 @@ export default function Header() {
               href="#about"
               onClick={(e) => handleNavClick(e, "#about")}
               className="block font-medium transition-colors hover:opacity-80"
-              style={{ color: "var(--charcoal)" }}
+              style={{ color: "var(--pure-white)" }}
             >
               About
             </Link>
@@ -144,17 +144,17 @@ export default function Header() {
               href="#contact"
               onClick={(e) => handleNavClick(e, "#contact")}
               className="block font-medium transition-colors hover:opacity-80"
-              style={{ color: "var(--charcoal)" }}
+              style={{ color: "var(--pure-white)" }}
             >
               Contact
             </Link>
-            <div className="pt-3 space-y-2 border-t border-gray-200">
+            <div className="pt-3 space-y-2 border-t border-gray-800">
               <Button
                 variant="outline"
                 className="w-full bg-transparent border-2 transition-colors"
                 style={{
-                  borderColor: "var(--navy-blue)",
-                  color: "var(--navy-blue)",
+                  borderColor: "var(--royal-blue)",
+                  color: "var(--pure-white)",
                 }}
               >
                 Log In
@@ -162,7 +162,7 @@ export default function Header() {
               <Button
                 onClick={handleStartTrial}
                 className="w-full text-white transition-colors"
-                style={{ backgroundColor: "var(--navy-blue)" }}
+                style={{ backgroundColor: "var(--royal-blue)" }}
               >
                 Start Free Trial
               </Button>
