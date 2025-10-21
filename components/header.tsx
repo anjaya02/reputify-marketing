@@ -23,8 +23,8 @@ export default function Header() {
   };
 
   const handleStartTrial = () => {
-    const contactSection = document.getElementById("contact");
-    contactSection?.scrollIntoView({ behavior: "smooth" });
+    const pricingSection = document.getElementById("pricing");
+    pricingSection?.scrollIntoView({ behavior: "smooth" });
   };
 
   const handleLogin = () => {

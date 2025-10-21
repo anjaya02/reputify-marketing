@@ -29,7 +29,7 @@ const testimonials = [
 
 export default function SocialProof() {
   return (
-    <section className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-white">
+    <section className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2

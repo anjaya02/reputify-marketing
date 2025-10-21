@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Mail, Phone, MapPin, Clock } from "lucide-react"
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Mail, Phone, MapPin, Clock } from "lucide-react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -13,39 +13,59 @@ export default function Contact() {
     email: "",
     phone: "",
     message: "",
-  })
-  const [submitted, setSubmitted] = useState(false)
-  const [loading, setLoading] = useState(false)
+  });
+  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
-  }
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setLoading(true)
+    e.preventDefault();
+    setLoading(true);
 
     // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    await new Promise((resolve) => setTimeout(resolve, 1500));
 
-    setSubmitted(true)
-    setLoading(false)
-    setFormData({ name: "", businessType: "", email: "", phone: "", message: "" })
+    setSubmitted(true);
+    setLoading(false);
+    setFormData({
+      name: "",
+      businessType: "",
+      email: "",
+      phone: "",
+      message: "",
+    });
 
     // Reset success message after 5 seconds
-    setTimeout(() => setSubmitted(false), 5000)
-  }
+    setTimeout(() => setSubmitted(false), 5000);
+  };
 
   return (
-    <section id="contact" className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-white">
+    <section
+      id="contact"
+      className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-white"
+    >
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-balance" style={{ color: "var(--pure-black)" }}>
+          <h2
+            className="text-3xl md:text-5xl font-bold mb-4 text-balance"
+            style={{ color: "var(--pure-black)" }}
+          >
             Get in Touch
           </h2>
-          <p className="text-lg max-w-2xl mx-auto" style={{ color: "var(--charcoal)" }}>
-            Have questions? Our team is here to help you get started with Reputify
+          <p
+            className="text-lg max-w-2xl mx-auto"
+            style={{ color: "var(--charcoal)" }}
+          >
+            Have questions? Our team is here to help you get started with
+            Reputify
           </p>
         </div>
 
@@ -57,7 +77,10 @@ export default function Contact() {
             >
               <Mail className="w-6 h-6" style={{ color: "var(--navy-blue)" }} />
             </div>
-            <h3 className="font-bold mb-2" style={{ color: "var(--pure-black)" }}>
+            <h3
+              className="font-bold mb-2"
+              style={{ color: "var(--pure-black)" }}
+            >
               Email
             </h3>
             <p className="text-sm" style={{ color: "var(--charcoal)" }}>
@@ -70,9 +93,15 @@ export default function Contact() {
               className="w-12 h-12 rounded-lg flex items-center justify-center mb-4"
               style={{ backgroundColor: "rgba(59, 130, 246, 0.1)" }}
             >
-              <Phone className="w-6 h-6" style={{ color: "var(--royal-blue)" }} />
+              <Phone
+                className="w-6 h-6"
+                style={{ color: "var(--royal-blue)" }}
+              />
             </div>
-            <h3 className="font-bold mb-2" style={{ color: "var(--pure-black)" }}>
+            <h3
+              className="font-bold mb-2"
+              style={{ color: "var(--pure-black)" }}
+            >
               WhatsApp
             </h3>
             <p className="text-sm" style={{ color: "var(--charcoal)" }}>
@@ -85,9 +114,15 @@ export default function Contact() {
               className="w-12 h-12 rounded-lg flex items-center justify-center mb-4"
               style={{ backgroundColor: "rgba(147, 197, 253, 0.1)" }}
             >
-              <MapPin className="w-6 h-6" style={{ color: "var(--light-blue)" }} />
+              <MapPin
+                className="w-6 h-6"
+                style={{ color: "var(--light-blue)" }}
+              />
             </div>
-            <h3 className="font-bold mb-2" style={{ color: "var(--pure-black)" }}>
+            <h3
+              className="font-bold mb-2"
+              style={{ color: "var(--pure-black)" }}
+            >
               Office
             </h3>
             <p className="text-sm" style={{ color: "var(--charcoal)" }}>
@@ -101,7 +136,11 @@ export default function Contact() {
           <div>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-2" style={{ color: "var(--pure-black)" }}>
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium mb-2"
+                  style={{ color: "var(--pure-black)" }}
+                >
                   Full Name
                 </label>
                 <input
@@ -111,8 +150,10 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 rounded-lg border-2 border-gray-200 bg-white focus:outline-none focus:ring-2 focus:ring-offset-0 transition-all"
-                  style={{ color: "var(--pure-black)", focusBorderColor: "var(--navy-blue)" }}
+                  className="w-full px-4 py-2 rounded-lg border-2 border-gray-200 bg-white focus:outline-none focus:ring-2 focus:ring-offset-0 transition-all focus:border-blue-600"
+                  style={{
+                    color: "var(--pure-black)",
+                  }}
                   placeholder="Your name"
                 />
               </div>
@@ -217,9 +258,14 @@ export default function Contact() {
               {submitted && (
                 <div
                   className="p-4 rounded-lg border-2 border-green-200"
-                  style={{ backgroundColor: "rgba(16, 185, 129, 0.1)", color: "var(--success)" }}
+                  style={{
+                    backgroundColor: "rgba(16, 185, 129, 0.1)",
+                    color: "var(--success)",
+                  }}
                 >
-                  <p className="font-medium">Thank you! We'll get back to you soon.</p>
+                  <p className="font-medium">
+                    Thank you! We'll get back to you soon.
+                  </p>
                 </div>
               )}
             </form>
@@ -228,17 +274,31 @@ export default function Contact() {
           {/* Business Hours & Info */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold mb-4" style={{ color: "var(--pure-black)" }}>
+              <h3
+                className="text-2xl font-bold mb-4"
+                style={{ color: "var(--pure-black)" }}
+              >
                 Business Hours
               </h3>
               <div className="flex gap-4 p-6 rounded-lg border-2 border-gray-200 bg-white">
-                <Clock className="w-6 h-6 flex-shrink-0 mt-1" style={{ color: "var(--navy-blue)" }} />
+                <Clock
+                  className="w-6 h-6 flex-shrink-0 mt-1"
+                  style={{ color: "var(--navy-blue)" }}
+                />
                 <div>
-                  <p className="font-medium" style={{ color: "var(--pure-black)" }}>
+                  <p
+                    className="font-medium"
+                    style={{ color: "var(--pure-black)" }}
+                  >
                     Monday - Friday
                   </p>
-                  <p style={{ color: "var(--charcoal)" }}>9:00 AM - 6:00 PM (Sri Lankan Time)</p>
-                  <p className="text-sm mt-2" style={{ color: "var(--charcoal)" }}>
+                  <p style={{ color: "var(--charcoal)" }}>
+                    9:00 AM - 6:00 PM (Sri Lankan Time)
+                  </p>
+                  <p
+                    className="text-sm mt-2"
+                    style={{ color: "var(--charcoal)" }}
+                  >
                     We respond to inquiries within 24 hours
                   </p>
                 </div>
@@ -246,33 +306,56 @@ export default function Contact() {
             </div>
 
             <div>
-              <h3 className="text-2xl font-bold mb-4" style={{ color: "var(--pure-black)" }}>
+              <h3
+                className="text-2xl font-bold mb-4"
+                style={{ color: "var(--pure-black)" }}
+              >
                 Why Contact Us?
               </h3>
               <ul className="space-y-3">
                 <li className="flex gap-3">
-                  <span className="font-bold" style={{ color: "var(--navy-blue)" }}>
+                  <span
+                    className="font-bold"
+                    style={{ color: "var(--navy-blue)" }}
+                  >
                     ✓
                   </span>
-                  <span style={{ color: "var(--charcoal)" }}>Get a personalized demo tailored to your business</span>
+                  <span style={{ color: "var(--charcoal)" }}>
+                    Get a personalized demo tailored to your business
+                  </span>
                 </li>
                 <li className="flex gap-3">
-                  <span className="font-bold" style={{ color: "var(--navy-blue)" }}>
+                  <span
+                    className="font-bold"
+                    style={{ color: "var(--navy-blue)" }}
+                  >
                     ✓
                   </span>
-                  <span style={{ color: "var(--charcoal)" }}>Discuss custom integration options</span>
+                  <span style={{ color: "var(--charcoal)" }}>
+                    Discuss custom integration options
+                  </span>
                 </li>
                 <li className="flex gap-3">
-                  <span className="font-bold" style={{ color: "var(--navy-blue)" }}>
+                  <span
+                    className="font-bold"
+                    style={{ color: "var(--navy-blue)" }}
+                  >
                     ✓
                   </span>
-                  <span style={{ color: "var(--charcoal)" }}>Learn about special pricing for bulk users</span>
+                  <span style={{ color: "var(--charcoal)" }}>
+                    Learn about special pricing for bulk users
+                  </span>
                 </li>
                 <li className="flex gap-3">
-                  <span className="font-bold" style={{ color: "var(--navy-blue)" }}>
+                  <span
+                    className="font-bold"
+                    style={{ color: "var(--navy-blue)" }}
+                  >
                     ✓
                   </span>
-                  <span style={{ color: "var(--charcoal)" }}>Get expert advice on reputation management</span>
+                  <span style={{ color: "var(--charcoal)" }}>
+                    Get expert advice on reputation management
+                  </span>
                 </li>
               </ul>
             </div>
@@ -280,5 +363,5 @@ export default function Contact() {
         </div>
       </div>
     </section>
-  )
+  );
 }

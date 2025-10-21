@@ -119,7 +119,7 @@ export default function Pricing() {
   return (
     <section
       id="pricing"
-      className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-white"
+      className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-white"
     >
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
@@ -230,8 +230,12 @@ export default function Pricing() {
         <div className="text-center mb-8">
           <button
             onClick={() => setShowComparison(!showComparison)}
-            className="font-medium transition-colors hover:opacity-80"
-            style={{ color: "var(--navy-blue)" }}
+            className="font-medium transition-colors hover:opacity-80 px-4 py-2 border rounded-lg hover:bg-gray-50 cursor-pointer"
+            style={{
+              color: "var(--navy-blue)",
+              borderColor: "var(--navy-blue)",
+            }}
+            type="button"
           >
             {showComparison ? "Hide" : "Show"} Detailed Comparison
           </button>
