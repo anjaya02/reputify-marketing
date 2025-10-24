@@ -184,9 +184,9 @@ export default function Pricing() {
               </div>
 
               <Button
-                className={`w-full mb-8 text-white transition-all duration-300 hover:scale-105 hover:shadow-lg ${
+                className={`w-full mb-8 text-white transition-all duration-300 hover:scale-105 hover:shadow-lg hover:brightness-110 active:scale-95 ${
                   plan.highlighted
-                    ? "hover:shadow-purple-500/25"
+                    ? "hover:shadow-purple-500/50"
                     : "border-2 hover:bg-purple-700/10"
                 }`}
                 style={{

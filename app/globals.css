@@ -169,11 +169,31 @@ select:focus {
 /* Override browser default blue highlighting for select options */
 select option {
   background-color: #1f2937 !important;
+  background: #1f2937 !important;
   color: white !important;
 }
 
-select option:checked,
+select option:checked {
+  background-color: var(--deep-purple) !important;
+  background: var(--deep-purple) !important;
+  color: white !important;
+}
+
 select option:hover {
   background-color: var(--deep-purple) !important;
+  background: var(--deep-purple) !important;
+  color: white !important;
+}
+
+select option:focus {
+  background-color: var(--deep-purple) !important;
+  background: var(--deep-purple) !important;
+  color: white !important;
+}
+
+/* Force all select option states to use our colors */
+select option[selected] {
+  background-color: var(--deep-purple) !important;
+  background: var(--deep-purple) !important;
   color: white !important;
 }

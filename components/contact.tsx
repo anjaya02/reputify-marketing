@@ -4,7 +4,7 @@ import type React from "react";
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, ChevronDown } from "lucide-react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -180,37 +180,62 @@ export default function Contact() {
                 >
                   <option
                     value=""
-                    style={{ backgroundColor: "#1f2937", color: "white" }}
+                    disabled
+                    className="bg-gray-800 text-white"
+                    style={{
+                      backgroundColor: "#1f2937 !important",
+                      color: "white !important",
+                    }}
                   >
                     Select your business type
                   </option>
                   <option
                     value="cafe"
-                    style={{ backgroundColor: "#1f2937", color: "white" }}
+                    className="bg-gray-800 text-white"
+                    style={{
+                      backgroundColor: "#1f2937 !important",
+                      color: "white !important",
+                    }}
                   >
                     Cafe/Restaurant
                   </option>
                   <option
                     value="hotel"
-                    style={{ backgroundColor: "#1f2937", color: "white" }}
+                    className="bg-gray-800 text-white"
+                    style={{
+                      backgroundColor: "#1f2937 !important",
+                      color: "white !important",
+                    }}
                   >
                     Hotel/Hospitality
                   </option>
                   <option
                     value="retail"
-                    style={{ backgroundColor: "#1f2937", color: "white" }}
+                    className="bg-gray-800 text-white"
+                    style={{
+                      backgroundColor: "#1f2937 !important",
+                      color: "white !important",
+                    }}
                   >
                     Retail
                   </option>
                   <option
                     value="healthcare"
-                    style={{ backgroundColor: "#1f2937", color: "white" }}
+                    className="bg-gray-800 text-white"
+                    style={{
+                      backgroundColor: "#1f2937 !important",
+                      color: "white !important",
+                    }}
                   >
                     Healthcare
                   </option>
                   <option
                     value="other"
-                    style={{ backgroundColor: "#1f2937", color: "white" }}
+                    className="bg-gray-800 text-white"
+                    style={{
+                      backgroundColor: "#1f2937 !important",
+                      color: "white !important",
+                    }}
                   >
                     Other
                   </option>

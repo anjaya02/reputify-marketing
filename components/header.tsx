@@ -32,12 +32,18 @@ export default function Header() {
     console.log("Login clicked");
   };
 
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <header className="sticky top-0 z-50 bg-black/90 backdrop-blur-md supports-[backdrop-filter]:bg-black/70 border-b border-purple-900/20 shadow-lg shadow-purple-900/10">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
         <Link
           href="/"
-          className="flex items-center gap-2 font-bold text-xl transition-colors cursor-pointer"
+          onClick={handleLogoClick}
+          className="flex items-center gap-2 font-bold text-xl transition-all duration-300 hover:opacity-80 hover:scale-105 cursor-pointer"
           style={{ color: "var(--pure-white)" }}
         >
           <Shield className="w-6 h-6" />
@@ -96,7 +102,7 @@ export default function Header() {
           </Button>
           <Button
             onClick={handleStartTrial}
-            className="text-white transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25 hover:scale-105"
+            className="text-white transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50 hover:scale-105 hover:brightness-110 active:scale-95"
             style={{ backgroundColor: "var(--deep-purple)" }}
           >
             Start Free Trial
@@ -162,7 +168,7 @@ export default function Header() {
               </Button>
               <Button
                 onClick={handleStartTrial}
-                className="w-full text-white transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25"
+                className="w-full text-white transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50 hover:scale-105 hover:brightness-110 active:scale-95"
                 style={{ backgroundColor: "var(--deep-purple)" }}
               >
                 Start Free Trial

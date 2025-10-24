@@ -11,18 +11,7 @@ export default function Hero() {
 
   return (
     <>
-      <section className="relative py-12 md:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0 -z-10">
-          <div
-            className="absolute top-0 right-0 w-96 h-96 rounded-full blur-3xl opacity-10"
-            style={{ backgroundColor: "var(--light-purple)" }}
-          ></div>
-          <div
-            className="absolute bottom-0 left-0 w-96 h-96 rounded-full blur-3xl opacity-10"
-            style={{ backgroundColor: "var(--deep-purple)" }}
-          ></div>
-        </div>
-
+      <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div
             className="inline-block mb-6 px-4 py-2 rounded-full border-2"
@@ -58,11 +47,11 @@ export default function Hero() {
             <Button
               size="lg"
               onClick={handleStartTrial}
-              className="text-white gap-2 transition-all duration-300 hover:shadow-lg"
+              className="group text-white gap-2 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50 hover:scale-105 hover:brightness-110 active:scale-95"
               style={{ backgroundColor: "var(--deep-purple)" }}
             >
               Start Free Trial
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Button>
           </div>
         </div>

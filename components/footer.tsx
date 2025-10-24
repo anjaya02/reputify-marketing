@@ -17,6 +17,11 @@ export default function Footer() {
     }
   };
 
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <footer
       className="py-16 px-4 sm:px-6 lg:px-8 text-white"
@@ -30,7 +35,8 @@ export default function Footer() {
           <div>
             <Link
               href="/"
-              className="flex items-center gap-2 font-bold text-xl mb-4 hover:text-accent transition-colors text-white cursor-pointer"
+              onClick={handleLogoClick}
+              className="flex items-center gap-2 font-bold text-xl mb-4 hover:text-accent transition-all duration-300 hover:scale-105 text-white cursor-pointer"
             >
               <Shield className="w-6 h-6" />
               Reputify
