@@ -4,12 +4,19 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Updated color theme to navy blue palette per Design.md */
+  /* Updated color theme to purple palette */
   /* Primary Colors */
-  --navy-blue: #1e3a8a;
-  --deep-navy: #1e40af;
-  --royal-blue: #3b82f6;
-  --light-blue: #93c5fd;
+  --deep-purple: #720e9e;
+  --royal-purple: #8b5cf6;
+  --medium-purple: #a855f7;
+  --light-purple: #c084fc;
+  --pale-purple: #ddd6fe;
+
+  /* Legacy blue variables mapped to purple for compatibility */
+  --navy-blue: #720e9e;
+  --deep-navy: #720e9e;
+  --royal-blue: #8b5cf6;
+  --light-blue: #c084fc;
 
   /* Neutral Colors */
   --pure-white: #ffffff;
@@ -22,7 +29,7 @@
   --success: #10b981;
   --warning: #f59e0b;
   --error: #ef4444;
-  --info: #3b82f6;
+  --info: #8b5cf6;
 
   /* Design Tokens */
   --background: #ffffff;
@@ -31,22 +38,22 @@
   --card-foreground: #1f2937;
   --popover: #ffffff;
   --popover-foreground: #1f2937;
-  --primary: #1e3a8a;
+  --primary: #720e9e;
   --primary-foreground: #ffffff;
-  --secondary: #3b82f6;
+  --secondary: #8b5cf6;
   --secondary-foreground: #ffffff;
   --muted: #f8fafc;
   --muted-foreground: #6b7280;
-  --accent: #93c5fd;
-  --accent-foreground: #1e3a8a;
+  --accent: #c084fc;
+  --accent-foreground: #720e9e;
   --destructive: #ef4444;
   --destructive-foreground: #ffffff;
   --border: #e5e7eb;
   --input: #f8fafc;
-  --ring: #1e3a8a;
-  --chart-1: #1e3a8a;
-  --chart-2: #3b82f6;
-  --chart-3: #93c5fd;
+  --ring: #720e9e;
+  --chart-1: #720e9e;
+  --chart-2: #8b5cf6;
+  --chart-3: #c084fc;
   --chart-4: #10b981;
   --chart-5: #1e40af;
   --radius: 0.625rem;
@@ -154,7 +161,19 @@ html {
 input:focus,
 textarea:focus,
 select:focus {
-  border-color: var(--royal-blue);
+  border-color: var(--royal-purple);
   outline: none;
-  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+  box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.5);
+}
+
+/* Override browser default blue highlighting for select options */
+select option {
+  background-color: #1f2937 !important;
+  color: white !important;
+}
+
+select option:checked,
+select option:hover {
+  background-color: var(--deep-purple) !important;
+  color: white !important;
 }

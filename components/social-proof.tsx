@@ -49,19 +49,19 @@ export default function SocialProof() {
 
         {/* Stats */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <div className="text-center p-6 rounded-lg border-2 border-blue-600/50 bg-gray-900/50 backdrop-blur">
+          <div className="text-center p-6 rounded-lg border-2 border-purple-600/50 bg-gray-900/50 backdrop-blur">
             <div
               className="text-4xl font-bold mb-2"
-              style={{ color: "var(--light-blue)" }}
+              style={{ color: "var(--light-purple)" }}
             >
               50+
             </div>
             <p style={{ color: "var(--light-gray)" }}>Active Businesses</p>
           </div>
-          <div className="text-center p-6 rounded-lg border-2 border-blue-600/50 bg-gray-900/50 backdrop-blur">
+          <div className="text-center p-6 rounded-lg border-2 border-purple-600/50 bg-gray-900/50 backdrop-blur">
             <div
               className="text-4xl font-bold mb-2"
-              style={{ color: "var(--light-blue)" }}
+              style={{ color: "var(--light-purple)" }}
             >
               30%
             </div>
@@ -69,10 +69,10 @@ export default function SocialProof() {
               Avg. Satisfaction Improvement
             </p>
           </div>
-          <div className="text-center p-6 rounded-lg border-2 border-blue-600/50 bg-gray-900/50 backdrop-blur">
+          <div className="text-center p-6 rounded-lg border-2 border-purple-600/50 bg-gray-900/50 backdrop-blur">
             <div
               className="text-4xl font-bold mb-2"
-              style={{ color: "var(--light-blue)" }}
+              style={{ color: "var(--light-purple)" }}
             >
               4.8/5
             </div>
@@ -85,7 +85,7 @@ export default function SocialProof() {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="p-8 rounded-lg border-2 border-blue-600/50 bg-gray-900/50 backdrop-blur hover:bg-gray-800/50 transition-all duration-300"
+              className="p-8 rounded-lg border-2 border-purple-600/50 bg-gray-900/50 backdrop-blur hover:bg-gray-800/50 transition-all duration-300"
             >
               <div className="flex gap-1 mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (

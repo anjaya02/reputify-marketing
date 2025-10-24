@@ -54,15 +54,15 @@ export default function Features() {
               <div
                 key={index}
                 className="p-8 rounded-lg border-2 bg-gray-900/50 backdrop-blur hover:bg-gray-800/50 transition-all duration-300 hover:-translate-y-1"
-                style={{ borderColor: "var(--royal-blue)" }}
+                style={{ borderColor: "var(--deep-purple)" }}
               >
                 <div
                   className="w-12 h-12 rounded-lg flex items-center justify-center mb-4"
-                  style={{ backgroundColor: "rgba(59, 130, 246, 0.2)" }}
+                  style={{ backgroundColor: "rgba(114, 14, 158, 0.3)" }}
                 >
                   <Icon
                     className="w-6 h-6"
-                    style={{ color: "var(--light-blue)" }}
+                    style={{ color: "var(--light-purple)" }}
                   />
                 </div>
                 <h3

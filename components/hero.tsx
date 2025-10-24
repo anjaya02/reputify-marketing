@@ -15,11 +15,11 @@ export default function Hero() {
         <div className="absolute inset-0 -z-10">
           <div
             className="absolute top-0 right-0 w-96 h-96 rounded-full blur-3xl opacity-10"
-            style={{ backgroundColor: "var(--light-blue)" }}
+            style={{ backgroundColor: "var(--light-purple)" }}
           ></div>
           <div
             className="absolute bottom-0 left-0 w-96 h-96 rounded-full blur-3xl opacity-10"
-            style={{ backgroundColor: "var(--navy-blue)" }}
+            style={{ backgroundColor: "var(--deep-purple)" }}
           ></div>
         </div>
 
@@ -27,13 +27,13 @@ export default function Hero() {
           <div
             className="inline-block mb-6 px-4 py-2 rounded-full border-2"
             style={{
-              backgroundColor: "rgba(59, 130, 246, 0.1)",
-              borderColor: "rgba(59, 130, 246, 0.3)",
+              backgroundColor: "rgba(114, 14, 158, 0.2)",
+              borderColor: "rgba(114, 14, 158, 0.4)",
             }}
           >
             <span
               className="text-sm font-medium"
-              style={{ color: "var(--royal-blue)" }}
+              style={{ color: "var(--light-purple)" }}
             >
               AI-Powered Reputation Management
             </span>
@@ -59,7 +59,7 @@ export default function Hero() {
               size="lg"
               onClick={handleStartTrial}
               className="text-white gap-2 transition-all duration-300 hover:shadow-lg"
-              style={{ backgroundColor: "var(--navy-blue)" }}
+              style={{ backgroundColor: "var(--deep-purple)" }}
             >
               Start Free Trial
               <ArrowRight className="w-4 h-4" />

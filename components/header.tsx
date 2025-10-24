@@ -33,11 +33,11 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-black/95 backdrop-blur supports-[backdrop-filter]:bg-black/80 border-b border-gray-800 shadow-sm">
+    <header className="sticky top-0 z-50 bg-black/90 backdrop-blur-md supports-[backdrop-filter]:bg-black/70 border-b border-purple-900/20 shadow-lg shadow-purple-900/10">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
         <Link
           href="/"
-          className="flex items-center gap-2 font-bold text-xl transition-colors"
+          className="flex items-center gap-2 font-bold text-xl transition-colors cursor-pointer"
           style={{ color: "var(--pure-white)" }}
         >
           <Shield className="w-6 h-6" />
@@ -49,7 +49,7 @@ export default function Header() {
           <Link
             href="#features"
             onClick={(e) => handleNavClick(e, "#features")}
-            className="font-medium transition-colors hover:opacity-80"
+            className="font-medium transition-colors hover:opacity-80 cursor-pointer"
             style={{ color: "var(--pure-white)" }}
           >
             Features
@@ -57,7 +57,7 @@ export default function Header() {
           <Link
             href="#pricing"
             onClick={(e) => handleNavClick(e, "#pricing")}
-            className="font-medium transition-colors hover:opacity-80"
+            className="font-medium transition-colors hover:opacity-80 cursor-pointer"
             style={{ color: "var(--pure-white)" }}
           >
             Pricing
@@ -65,7 +65,7 @@ export default function Header() {
           <Link
             href="#about"
             onClick={(e) => handleNavClick(e, "#about")}
-            className="font-medium transition-colors hover:opacity-80"
+            className="font-medium transition-colors hover:opacity-80 cursor-pointer"
             style={{ color: "var(--pure-white)" }}
           >
             About
@@ -73,7 +73,7 @@ export default function Header() {
           <Link
             href="#contact"
             onClick={(e) => handleNavClick(e, "#contact")}
-            className="font-medium transition-colors hover:opacity-80"
+            className="font-medium transition-colors hover:opacity-80 cursor-pointer"
             style={{ color: "var(--pure-white)" }}
           >
             Contact
@@ -85,18 +85,19 @@ export default function Header() {
           <Button
             variant="outline"
             onClick={handleLogin}
-            className="transition-all duration-300"
+            className="transition-all duration-300 hover:bg-purple-700/10 hover:shadow-md hover:scale-105"
             style={{
-              borderColor: "var(--navy-blue)",
-              color: "var(--navy-blue)",
+              borderColor: "var(--deep-purple)",
+              color: "var(--pure-white)",
+              backgroundColor: "transparent",
             }}
           >
             Log In
           </Button>
           <Button
             onClick={handleStartTrial}
-            className="text-white transition-all duration-300 hover:shadow-lg"
-            style={{ backgroundColor: "var(--navy-blue)" }}
+            className="text-white transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25 hover:scale-105"
+            style={{ backgroundColor: "var(--deep-purple)" }}
           >
             Start Free Trial
           </Button>
@@ -104,7 +105,7 @@ export default function Header() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-white"
+          className="md:hidden text-white cursor-pointer"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
@@ -114,12 +115,12 @@ export default function Header() {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden border-t border-gray-800 bg-black/95">
+        <div className="md:hidden border-t border-purple-900/20 bg-black/90 backdrop-blur-md">
           <div className="px-4 py-4 space-y-3">
             <Link
               href="#features"
               onClick={(e) => handleNavClick(e, "#features")}
-              className="block font-medium transition-colors hover:opacity-80"
+              className="block font-medium transition-colors hover:opacity-80 cursor-pointer"
               style={{ color: "var(--pure-white)" }}
             >
               Features
@@ -127,7 +128,7 @@ export default function Header() {
             <Link
               href="#pricing"
               onClick={(e) => handleNavClick(e, "#pricing")}
-              className="block font-medium transition-colors hover:opacity-80"
+              className="block font-medium transition-colors hover:opacity-80 cursor-pointer"
               style={{ color: "var(--pure-white)" }}
             >
               Pricing
@@ -135,7 +136,7 @@ export default function Header() {
             <Link
               href="#about"
               onClick={(e) => handleNavClick(e, "#about")}
-              className="block font-medium transition-colors hover:opacity-80"
+              className="block font-medium transition-colors hover:opacity-80 cursor-pointer"
               style={{ color: "var(--pure-white)" }}
             >
               About
@@ -143,17 +144,17 @@ export default function Header() {
             <Link
               href="#contact"
               onClick={(e) => handleNavClick(e, "#contact")}
-              className="block font-medium transition-colors hover:opacity-80"
+              className="block font-medium transition-colors hover:opacity-80 cursor-pointer"
               style={{ color: "var(--pure-white)" }}
             >
               Contact
             </Link>
-            <div className="pt-3 space-y-2 border-t border-gray-800">
+            <div className="pt-3 space-y-2 border-t border-purple-900/20">
               <Button
                 variant="outline"
-                className="w-full bg-transparent border-2 transition-colors"
+                className="w-full bg-transparent border-2 transition-all duration-300 hover:bg-purple-700/10 hover:shadow-md"
                 style={{
-                  borderColor: "var(--royal-blue)",
+                  borderColor: "var(--deep-purple)",
                   color: "var(--pure-white)",
                 }}
               >
@@ -161,8 +162,8 @@ export default function Header() {
               </Button>
               <Button
                 onClick={handleStartTrial}
-                className="w-full text-white transition-colors"
-                style={{ backgroundColor: "var(--royal-blue)" }}
+                className="w-full text-white transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25"
+                style={{ backgroundColor: "var(--deep-purple)" }}
               >
                 Start Free Trial
               </Button>

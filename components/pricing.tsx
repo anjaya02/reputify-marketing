@@ -145,17 +145,17 @@ export default function Pricing() {
               }`}
               style={{
                 borderColor: plan.highlighted
-                  ? "var(--royal-blue)"
-                  : "rgba(59, 130, 246, 0.5)",
+                  ? "var(--deep-purple)"
+                  : "rgba(114, 14, 158, 0.5)",
                 backgroundColor: plan.highlighted
-                  ? "rgba(30, 58, 138, 0.2)"
+                  ? "rgba(114, 14, 158, 0.2)"
                   : "rgba(17, 24, 39, 0.5)",
               }}
             >
               {plan.highlighted && (
                 <div
                   className="inline-block mb-4 px-3 py-1 text-xs font-bold rounded-full text-white"
-                  style={{ backgroundColor: "var(--royal-blue)" }}
+                  style={{ backgroundColor: "var(--deep-purple)" }}
                 >
                   MOST POPULAR
                 </div>
@@ -184,17 +184,19 @@ export default function Pricing() {
               </div>
 
               <Button
-                className={`w-full mb-8 text-white transition-all ${
-                  plan.highlighted ? "" : "border-2"
+                className={`w-full mb-8 text-white transition-all duration-300 hover:scale-105 hover:shadow-lg ${
+                  plan.highlighted
+                    ? "hover:shadow-purple-500/25"
+                    : "border-2 hover:bg-purple-700/10"
                 }`}
                 style={{
                   backgroundColor: plan.highlighted
-                    ? "var(--navy-blue)"
+                    ? "var(--deep-purple)"
                     : "transparent",
                   borderColor: plan.highlighted
                     ? "transparent"
-                    : "var(--navy-blue)",
-                  color: plan.highlighted ? "white" : "var(--navy-blue)",
+                    : "var(--deep-purple)",
+                  color: plan.highlighted ? "white" : "var(--deep-purple)",
                 }}
               >
                 Start Free Trial
@@ -235,7 +237,7 @@ export default function Pricing() {
             className="font-medium transition-colors hover:opacity-80 px-4 py-2 border rounded-lg hover:bg-gray-800/50 cursor-pointer"
             style={{
               color: "var(--pure-white)",
-              borderColor: "var(--royal-blue)",
+              borderColor: "var(--deep-purple)",
               backgroundColor: "rgba(17, 24, 39, 0.3)",
             }}
             type="button"
@@ -248,7 +250,11 @@ export default function Pricing() {
         {showComparison && (
           <div
             className="overflow-x-auto rounded-lg border-2"
-            style={{ borderColor: "rgba(59, 130, 246, 0.5)" }}
+            style={{
+              borderColor: "var(--deep-purple) !important",
+              borderWidth: "2px !important",
+              borderStyle: "solid !important",
+            }}
           >
             <table className="w-full bg-gray-900/50 backdrop-blur">
               <thead>

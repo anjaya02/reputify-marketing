@@ -10,8 +10,8 @@ export default function About() {
             <div
               className="inline-block mb-4 px-3 py-1 text-xs font-bold rounded-full"
               style={{
-                backgroundColor: "rgba(59, 130, 246, 0.2)",
-                color: "var(--light-blue)",
+                backgroundColor: "rgba(114, 14, 158, 0.3)",
+                color: "var(--light-purple)",
               }}
             >
               OUR STORY
@@ -44,11 +44,11 @@ export default function About() {
               <div className="flex gap-4">
                 <div
                   className="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0"
-                  style={{ backgroundColor: "rgba(59, 130, 246, 0.2)" }}
+                  style={{ backgroundColor: "rgba(114, 14, 158, 0.3)" }}
                 >
                   <Award
                     className="w-6 h-6"
-                    style={{ color: "var(--light-blue)" }}
+                    style={{ color: "var(--light-purple)" }}
                   />
                 </div>
                 <div>
@@ -66,11 +66,11 @@ export default function About() {
               <div className="flex gap-4">
                 <div
                   className="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0"
-                  style={{ backgroundColor: "rgba(59, 130, 246, 0.2)" }}
+                  style={{ backgroundColor: "rgba(114, 14, 158, 0.3)" }}
                 >
                   <Users
                     className="w-6 h-6"
-                    style={{ color: "var(--light-blue)" }}
+                    style={{ color: "var(--light-purple)" }}
                   />
                 </div>
                 <div>
@@ -88,11 +88,11 @@ export default function About() {
               <div className="flex gap-4">
                 <div
                   className="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0"
-                  style={{ backgroundColor: "rgba(59, 130, 246, 0.2)" }}
+                  style={{ backgroundColor: "rgba(114, 14, 158, 0.3)" }}
                 >
                   <Zap
                     className="w-6 h-6"
-                    style={{ color: "var(--light-blue)" }}
+                    style={{ color: "var(--light-purple)" }}
                   />
                 </div>
                 <div>
@@ -111,7 +111,7 @@ export default function About() {
           </div>
 
           {/* Right side - Mission */}
-          <div className="bg-gray-900/50 backdrop-blur rounded-lg border-2 border-blue-600/50 p-8 md:p-12">
+          <div className="bg-gray-900/50 backdrop-blur rounded-lg border-2 border-purple-600/50 p-8 md:p-12">
             <div className="mb-8">
               <h3
                 className="text-2xl font-bold mb-4"
@@ -143,7 +143,7 @@ export default function About() {
                   <li className="flex gap-2">
                     <span
                       className="font-bold"
-                      style={{ color: "var(--light-blue)" }}
+                      style={{ color: "var(--light-purple)" }}
                     >
                       •
                     </span>
@@ -152,7 +152,7 @@ export default function About() {
                   <li className="flex gap-2">
                     <span
                       className="font-bold"
-                      style={{ color: "var(--light-blue)" }}
+                      style={{ color: "var(--light-purple)" }}
                     >
                       •
                     </span>
@@ -164,7 +164,7 @@ export default function About() {
                   <li className="flex gap-2">
                     <span
                       className="font-bold"
-                      style={{ color: "var(--light-blue)" }}
+                      style={{ color: "var(--light-purple)" }}
                     >
                       •
                     </span>
@@ -173,7 +173,7 @@ export default function About() {
                   <li className="flex gap-2">
                     <span
                       className="font-bold"
-                      style={{ color: "var(--light-blue)" }}
+                      style={{ color: "var(--light-purple)" }}
                     >
                       •
                     </span>

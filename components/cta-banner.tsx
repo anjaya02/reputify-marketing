@@ -12,7 +12,7 @@ export default function CTABanner() {
   return (
     <section
       className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 text-white"
-      style={{ backgroundColor: "var(--navy-blue)" }}
+      style={{ backgroundColor: "var(--deep-purple)" }}
     >
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">
@@ -27,7 +27,7 @@ export default function CTABanner() {
             onClick={handleStartTrial}
             size="lg"
             className="gap-2 transition-all duration-300 hover:shadow-lg bg-white hover:bg-white/90"
-            style={{ color: "var(--navy-blue)" }}
+            style={{ color: "var(--deep-purple)" }}
           >
             Start Your Free Trial
             <ArrowRight className="w-4 h-4" />

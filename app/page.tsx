@@ -17,12 +17,13 @@ export const metadata = {
 export default function Home() {
   return (
     <div className="min-h-screen w-full relative">
-      {/* Dark Horizon Glow */}
+      {/* Violet Abyss */}
       <div
         className="absolute inset-0 z-0"
         style={{
           background:
-            "radial-gradient(125% 125% at 50% 10%, #000000 40%, #0d1a36 100%)",
+            "radial-gradient(125% 125% at 50% 10%, #000000 40%, #2b092b 100%)",
+          backgroundAttachment: "fixed",
         }}
       />
       {/* Your Content/Components */}

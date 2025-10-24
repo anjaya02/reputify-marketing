@@ -1,10 +1,10 @@
 export default function PlatformIcons() {
   const platforms = [
-    { name: "Google", color: "bg-gray-900/40 border-blue-500/50" },
-    { name: "Facebook", color: "bg-gray-900/40 border-blue-500/50" },
-    { name: "LinkedIn", color: "bg-gray-900/40 border-blue-500/50" },
-    { name: "YouTube", color: "bg-gray-900/40 border-red-500/50" },
-    { name: "Reddit", color: "bg-gray-900/40 border-orange-500/50" },
+    { name: "Google", color: "bg-gray-900/40 border-purple-500/50" },
+    { name: "Facebook", color: "bg-gray-900/40 border-purple-500/50" },
+    { name: "LinkedIn", color: "bg-gray-900/40 border-purple-500/50" },
+    { name: "YouTube", color: "bg-gray-900/40 border-purple-500/50" },
+    { name: "Reddit", color: "bg-gray-900/40 border-purple-500/50" },
   ];
 
   return (
@@ -42,7 +42,7 @@ export default function PlatformIcons() {
           ))}
         </div>
 
-        <div className="mt-16 p-8 rounded-lg border-2 border-blue-600/50 bg-gray-900/50 backdrop-blur">
+        <div className="mt-16 p-8 rounded-lg border-2 border-purple-600/50 bg-gray-900/50 backdrop-blur">
           <h3
             className="text-2xl font-bold mb-4"
             style={{ color: "var(--pure-white)" }}
@@ -53,7 +53,7 @@ export default function PlatformIcons() {
             <div className="flex gap-4">
               <span
                 className="font-bold text-xl"
-                style={{ color: "var(--light-blue)" }}
+                style={{ color: "var(--light-purple)" }}
               >
                 1
               </span>
@@ -72,7 +72,7 @@ export default function PlatformIcons() {
             <div className="flex gap-4">
               <span
                 className="font-bold text-xl"
-                style={{ color: "var(--light-blue)" }}
+                style={{ color: "var(--light-purple)" }}
               >
                 2
               </span>
@@ -91,7 +91,7 @@ export default function PlatformIcons() {
             <div className="flex gap-4">
               <span
                 className="font-bold text-xl"
-                style={{ color: "var(--light-blue)" }}
+                style={{ color: "var(--light-purple)" }}
               >
                 3
               </span>
@@ -110,7 +110,7 @@ export default function PlatformIcons() {
             <div className="flex gap-4">
               <span
                 className="font-bold text-xl"
-                style={{ color: "var(--light-blue)" }}
+                style={{ color: "var(--light-purple)" }}
               >
                 4
               </span>

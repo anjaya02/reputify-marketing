@@ -21,7 +21,7 @@ export default function Footer() {
     <footer
       className="py-16 px-4 sm:px-6 lg:px-8 text-white"
       style={{
-        background: "linear-gradient(135deg, #0f172a, var(--navy-blue))",
+        background: "linear-gradient(135deg, #0f0f23, var(--deep-purple))",
       }}
     >
       <div className="max-w-6xl mx-auto">
@@ -30,7 +30,7 @@ export default function Footer() {
           <div>
             <Link
               href="/"
-              className="flex items-center gap-2 font-bold text-xl mb-4 hover:text-accent transition-colors text-white"
+              className="flex items-center gap-2 font-bold text-xl mb-4 hover:text-accent transition-colors text-white cursor-pointer"
             >
               <Shield className="w-6 h-6" />
               Reputify
@@ -49,7 +49,7 @@ export default function Footer() {
                 <Link
                   href="#features"
                   onClick={(e) => handleNavClick(e, "#features")}
-                  className="hover:text-accent transition-colors"
+                  className="hover:text-accent transition-colors cursor-pointer"
                 >
                   Features
                 </Link>
@@ -58,13 +58,16 @@ export default function Footer() {
                 <Link
                   href="#pricing"
                   onClick={(e) => handleNavClick(e, "#pricing")}
-                  className="hover:text-accent transition-colors"
+                  className="hover:text-accent transition-colors cursor-pointer"
                 >
                   Pricing
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-accent transition-colors">
+                <Link
+                  href="#"
+                  className="hover:text-accent transition-colors cursor-pointer"
+                >
                   Security
                 </Link>
               </li>

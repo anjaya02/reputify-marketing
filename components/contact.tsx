@@ -67,14 +67,14 @@ export default function Contact() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <div className="p-6 rounded-lg border-2 border-blue-600/50 bg-gray-900/50 backdrop-blur hover:bg-gray-800/50 transition-all">
+          <div className="p-6 rounded-lg border-2 border-purple-600/50 bg-gray-900/50 backdrop-blur hover:bg-gray-800/50 transition-all">
             <div
               className="w-12 h-12 rounded-lg flex items-center justify-center mb-4"
-              style={{ backgroundColor: "rgba(59, 130, 246, 0.2)" }}
+              style={{ backgroundColor: "rgba(139, 92, 246, 0.2)" }}
             >
               <Mail
                 className="w-6 h-6"
-                style={{ color: "var(--light-blue)" }}
+                style={{ color: "var(--light-purple)" }}
               />
             </div>
             <h3
@@ -88,14 +88,14 @@ export default function Contact() {
             </p>
           </div>
 
-          <div className="p-6 rounded-lg border-2 border-blue-600/50 bg-gray-900/50 backdrop-blur hover:bg-gray-800/50 transition-all">
+          <div className="p-6 rounded-lg border-2 border-purple-600/50 bg-gray-900/50 backdrop-blur hover:bg-gray-800/50 transition-all">
             <div
               className="w-12 h-12 rounded-lg flex items-center justify-center mb-4"
-              style={{ backgroundColor: "rgba(59, 130, 246, 0.2)" }}
+              style={{ backgroundColor: "rgba(139, 92, 246, 0.2)" }}
             >
               <Phone
                 className="w-6 h-6"
-                style={{ color: "var(--light-blue)" }}
+                style={{ color: "var(--light-purple)" }}
               />
             </div>
             <h3
@@ -109,14 +109,14 @@ export default function Contact() {
             </p>
           </div>
 
-          <div className="p-6 rounded-lg border-2 border-blue-600/50 bg-gray-900/50 backdrop-blur hover:bg-gray-800/50 transition-all">
+          <div className="p-6 rounded-lg border-2 border-purple-600/50 bg-gray-900/50 backdrop-blur hover:bg-gray-800/50 transition-all">
             <div
               className="w-12 h-12 rounded-lg flex items-center justify-center mb-4"
-              style={{ backgroundColor: "rgba(59, 130, 246, 0.2)" }}
+              style={{ backgroundColor: "rgba(139, 92, 246, 0.2)" }}
             >
               <MapPin
                 className="w-6 h-6"
-                style={{ color: "var(--light-blue)" }}
+                style={{ color: "var(--light-purple)" }}
               />
             </div>
             <h3
@@ -150,7 +150,7 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 rounded-lg border-2 border-gray-600 bg-gray-800/50 backdrop-blur focus:outline-none focus:ring-2 focus:ring-offset-0 transition-all focus:border-blue-500"
+                  className="w-full px-4 py-2 rounded-lg border-2 border-purple-900/50 bg-gray-800/50 backdrop-blur focus:outline-none focus:ring-2 focus:ring-offset-0 transition-all focus:border-purple-500"
                   style={{
                     color: "var(--pure-white)",
                   }}
@@ -172,15 +172,48 @@ export default function Contact() {
                   value={formData.businessType}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 rounded-lg border-2 border-gray-600 bg-gray-800/50 backdrop-blur focus:outline-none focus:ring-2 transition-all focus:border-blue-500"
-                  style={{ color: "var(--pure-white)" }}
+                  className="w-full px-4 py-2 rounded-lg border-2 border-purple-900/50 bg-gray-800/50 backdrop-blur focus:outline-none focus:ring-2 transition-all focus:border-purple-500 focus:ring-purple-500/50"
+                  style={{
+                    color: "var(--pure-white)",
+                    backgroundColor: "rgba(31, 41, 55, 0.5)",
+                  }}
                 >
-                  <option value="">Select your business type</option>
-                  <option value="cafe">Cafe/Restaurant</option>
-                  <option value="hotel">Hotel/Hospitality</option>
-                  <option value="retail">Retail</option>
-                  <option value="healthcare">Healthcare</option>
-                  <option value="other">Other</option>
+                  <option
+                    value=""
+                    style={{ backgroundColor: "#1f2937", color: "white" }}
+                  >
+                    Select your business type
+                  </option>
+                  <option
+                    value="cafe"
+                    style={{ backgroundColor: "#1f2937", color: "white" }}
+                  >
+                    Cafe/Restaurant
+                  </option>
+                  <option
+                    value="hotel"
+                    style={{ backgroundColor: "#1f2937", color: "white" }}
+                  >
+                    Hotel/Hospitality
+                  </option>
+                  <option
+                    value="retail"
+                    style={{ backgroundColor: "#1f2937", color: "white" }}
+                  >
+                    Retail
+                  </option>
+                  <option
+                    value="healthcare"
+                    style={{ backgroundColor: "#1f2937", color: "white" }}
+                  >
+                    Healthcare
+                  </option>
+                  <option
+                    value="other"
+                    style={{ backgroundColor: "#1f2937", color: "white" }}
+                  >
+                    Other
+                  </option>
                 </select>
               </div>
 
@@ -199,7 +232,7 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 rounded-lg border-2 border-gray-600 bg-gray-800/50 backdrop-blur focus:outline-none focus:ring-2 transition-all focus:border-blue-500"
+                  className="w-full px-4 py-2 rounded-lg border-2 border-purple-900/50 bg-gray-800/50 backdrop-blur focus:outline-none focus:ring-2 transition-all focus:border-purple-500"
                   style={{ color: "var(--pure-white)" }}
                   placeholder="your@email.com"
                 />
@@ -219,7 +252,7 @@ export default function Contact() {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 rounded-lg border-2 border-gray-600 bg-gray-800/50 backdrop-blur focus:outline-none focus:ring-2 transition-all focus:border-blue-500"
+                  className="w-full px-4 py-2 rounded-lg border-2 border-purple-900/50 bg-gray-800/50 backdrop-blur focus:outline-none focus:ring-2 transition-all focus:border-purple-500"
                   style={{ color: "var(--pure-white)" }}
                   placeholder="+94 XX XXX XXXX"
                 />
@@ -240,7 +273,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   rows={4}
-                  className="w-full px-4 py-2 rounded-lg border-2 border-gray-600 bg-gray-800/50 backdrop-blur focus:outline-none focus:ring-2 transition-all resize-none focus:border-blue-500"
+                  className="w-full px-4 py-2 rounded-lg border-2 border-purple-900/50 bg-gray-800/50 backdrop-blur focus:outline-none focus:ring-2 transition-all resize-none focus:border-purple-500"
                   style={{ color: "var(--pure-white)" }}
                   placeholder="Tell us about your business and how we can help..."
                 />
@@ -249,8 +282,8 @@ export default function Contact() {
               <Button
                 type="submit"
                 disabled={loading}
-                className="w-full text-white font-medium py-2 transition-all"
-                style={{ backgroundColor: "var(--navy-blue)" }}
+                className="w-full text-white font-medium py-2 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25 hover:scale-105 disabled:hover:scale-100 disabled:hover:shadow-none"
+                style={{ backgroundColor: "var(--deep-purple)" }}
               >
                 {loading ? "Sending..." : "Send Message"}
               </Button>
@@ -280,10 +313,10 @@ export default function Contact() {
               >
                 Business Hours
               </h3>
-              <div className="flex gap-4 p-6 rounded-lg border-2 border-blue-600/50 bg-gray-900/50 backdrop-blur">
+              <div className="flex gap-4 p-6 rounded-lg border-2 border-purple-600/50 bg-gray-900/50 backdrop-blur">
                 <Clock
                   className="w-6 h-6 flex-shrink-0 mt-1"
-                  style={{ color: "var(--light-blue)" }}
+                  style={{ color: "var(--light-purple)" }}
                 />
                 <div>
                   <p
@@ -316,7 +349,7 @@ export default function Contact() {
                 <li className="flex gap-3">
                   <span
                     className="font-bold"
-                    style={{ color: "var(--light-blue)" }}
+                    style={{ color: "var(--light-purple)" }}
                   >
                     ✓
                   </span>
@@ -327,7 +360,7 @@ export default function Contact() {
                 <li className="flex gap-3">
                   <span
                     className="font-bold"
-                    style={{ color: "var(--light-blue)" }}
+                    style={{ color: "var(--light-purple)" }}
                   >
                     ✓
                   </span>
@@ -338,7 +371,7 @@ export default function Contact() {
                 <li className="flex gap-3">
                   <span
                     className="font-bold"
-                    style={{ color: "var(--light-blue)" }}
+                    style={{ color: "var(--light-purple)" }}
                   >
                     ✓
                   </span>
@@ -349,7 +382,7 @@ export default function Contact() {
                 <li className="flex gap-3">
                   <span
                     className="font-bold"
-                    style={{ color: "var(--light-blue)" }}
+                    style={{ color: "var(--light-purple)" }}
                   >
                     ✓
                   </span>
