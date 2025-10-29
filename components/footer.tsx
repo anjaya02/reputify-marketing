@@ -38,8 +38,7 @@ export default function Footer() {
               onClick={handleLogoClick}
               className="flex items-center gap-2 font-bold text-xl mb-4 hover:text-accent transition-all duration-300 hover:scale-105 text-white cursor-pointer"
             >
-              <Shield className="w-6 h-6" />
-              Reputify
+              {/* TODO: Replace with the new logo component or image */}
             </Link>
             <p className="text-sm leading-relaxed text-white/70">
               AI-powered reputation management for Sri Lankan businesses. Built

@@ -46,8 +46,7 @@ export default function Header() {
           className="flex items-center gap-2 font-bold text-xl transition-all duration-300 hover:opacity-80 hover:scale-105 cursor-pointer"
           style={{ color: "var(--pure-white)" }}
         >
-          <Shield className="w-6 h-6" />
-          Reputify
+          {/* TODO: Replace with the new logo component or image */}
         </Link>
 
         {/* Desktop Navigation */}

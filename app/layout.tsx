@@ -27,7 +27,6 @@ export const metadata: Metadata = {
     icon: [
       { url: "/favicon.ico" },
       { url: "/favicon.svg", type: "image/svg+xml" },
-      { url: "/shield-favicon.svg", type: "image/svg+xml" },
     ],
     shortcut: "/favicon.ico",
     apple: "/favicon.svg",
@@ -37,7 +36,14 @@ export const metadata: Metadata = {
     description:
       "Transform your business reputation with AI-powered monitoring and insights",
     type: "website",
-    images: ["/placeholder-logo.png"],
+    images: ["/og-image.png"], // TODO: Create an OG image at public/og-image.png
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Reputify - AI Reputation Management for Sri Lankan Businesses",
+    description:
+      "Transform your business reputation with AI-powered monitoring and insights",
+    images: ["/og-image.png"], // TODO: Create an OG image at public/og-image.png
   },
   generator: "v0.app",
 };
