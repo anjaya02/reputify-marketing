@@ -5,6 +5,8 @@ export default function PlatformIcons() {
     { name: "LinkedIn", color: "bg-gray-900/40 border-purple-500/50" },
     { name: "YouTube", color: "bg-gray-900/40 border-purple-500/50" },
     { name: "Reddit", color: "bg-gray-900/40 border-purple-500/50" },
+    { name: "Instagram", color: "bg-gray-900/40 border-purple-500/50" },
+    { name: "TikTok", color: "bg-gray-900/40 border-purple-500/50" },
   ];
 
   return (

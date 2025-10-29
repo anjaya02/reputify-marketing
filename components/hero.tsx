@@ -40,7 +40,7 @@ export default function Hero() {
             style={{ color: "var(--light-gray)" }}
           >
             AI-powered reputation management for Sri Lankan businesses. Monitor
-            reviews across 5 platforms in Sinhala, Tamil & English.
+            reviews across 7 platforms in Sinhala, Tamil & English.
           </p>
 
           <div className="flex justify-center">

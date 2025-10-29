@@ -1,10 +1,8 @@
 "use client";
 
-import type React from "react";
-
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X, Shield } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function Header() {
@@ -23,13 +21,7 @@ export default function Header() {
   };
 
   const handleStartTrial = () => {
-    const pricingSection = document.getElementById("pricing");
-    pricingSection?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const handleLogin = () => {
-    // TODO: Implement login functionality
-    console.log("Login clicked");
+    document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth" });
   };
 
   const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -38,79 +30,56 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-black/90 backdrop-blur-md supports-[backdrop-filter]:bg-black/70 border-b border-purple-900/20 shadow-lg shadow-purple-900/10">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+    <header className="sticky top-0 z-50 bg-black/80 backdrop-blur-lg border-b border-purple-900/20 shadow-lg shadow-purple-900/10">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-5 flex items-center justify-between">
+        {/* Logo */}
         <Link
           href="/"
           onClick={handleLogoClick}
-          className="flex items-center gap-2 font-bold text-xl transition-all duration-300 hover:opacity-80 hover:scale-105 cursor-pointer"
-          style={{ color: "var(--pure-white)" }}
+          className="flex items-center transition-transform duration-300 hover:scale-105"
         >
-          {/* TODO: Replace with the new logo component or image */}
+          <img
+            src="/Logo-05.png"
+            alt="Reputify Logo"
+            className="h-16 sm:h-20 w-auto"
+          />
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8">
-          <Link
-            href="#features"
-            onClick={(e) => handleNavClick(e, "#features")}
-            className="font-medium transition-colors hover:opacity-80 cursor-pointer"
-            style={{ color: "var(--pure-white)" }}
-          >
-            Features
-          </Link>
-          <Link
-            href="#pricing"
-            onClick={(e) => handleNavClick(e, "#pricing")}
-            className="font-medium transition-colors hover:opacity-80 cursor-pointer"
-            style={{ color: "var(--pure-white)" }}
-          >
-            Pricing
-          </Link>
-          <Link
-            href="#about"
-            onClick={(e) => handleNavClick(e, "#about")}
-            className="font-medium transition-colors hover:opacity-80 cursor-pointer"
-            style={{ color: "var(--pure-white)" }}
-          >
-            About
-          </Link>
-          <Link
-            href="#contact"
-            onClick={(e) => handleNavClick(e, "#contact")}
-            className="font-medium transition-colors hover:opacity-80 cursor-pointer"
-            style={{ color: "var(--pure-white)" }}
-          >
-            Contact
-          </Link>
+        <div className="hidden md:flex items-center gap-8 text-white">
+          {["features", "pricing", "about", "contact"].map((item) => (
+            <Link
+              key={item}
+              href={`#${item}`}
+              onClick={(e) => handleNavClick(e, `#${item}`)}
+              className="relative font-medium transition-colors hover:text-purple-300 cursor-pointer after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:bg-purple-500 after:w-0 after:transition-all after:rounded-full hover:after:w-full"
+            >
+              {item.charAt(0).toUpperCase() + item.slice(1)}
+            </Link>
+          ))}
         </div>
 
-        {/* Desktop CTA */}
+        {/* Desktop Buttons */}
         <div className="hidden md:flex items-center gap-3">
           <Button
             variant="outline"
-            onClick={handleLogin}
-            className="transition-all duration-300 hover:bg-purple-700/10 hover:shadow-md hover:scale-105"
-            style={{
-              borderColor: "var(--deep-purple)",
-              color: "var(--pure-white)",
-              backgroundColor: "transparent",
-            }}
+            onClick={() => console.log("Login clicked")}
+            className="border-purple-700 text-white bg-transparent hover:bg-purple-800/30 hover:shadow-md transition"
           >
             Log In
           </Button>
+
           <Button
             onClick={handleStartTrial}
-            className="text-white transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50 hover:scale-105 hover:brightness-110 active:scale-95"
-            style={{ backgroundColor: "var(--deep-purple)" }}
+            className="bg-purple-700 text-white hover:shadow-purple-500/40 hover:brightness-110 hover:scale-105 active:scale-95 transition-all"
           >
             Start Free Trial
           </Button>
         </div>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Button */}
         <button
-          className="md:hidden text-white cursor-pointer"
+          className="md:hidden text-white"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
@@ -121,54 +90,29 @@ export default function Header() {
       {/* Mobile Navigation */}
       {isOpen && (
         <div className="md:hidden border-t border-purple-900/20 bg-black/90 backdrop-blur-md">
-          <div className="px-4 py-4 space-y-3">
-            <Link
-              href="#features"
-              onClick={(e) => handleNavClick(e, "#features")}
-              className="block font-medium transition-colors hover:opacity-80 cursor-pointer"
-              style={{ color: "var(--pure-white)" }}
-            >
-              Features
-            </Link>
-            <Link
-              href="#pricing"
-              onClick={(e) => handleNavClick(e, "#pricing")}
-              className="block font-medium transition-colors hover:opacity-80 cursor-pointer"
-              style={{ color: "var(--pure-white)" }}
-            >
-              Pricing
-            </Link>
-            <Link
-              href="#about"
-              onClick={(e) => handleNavClick(e, "#about")}
-              className="block font-medium transition-colors hover:opacity-80 cursor-pointer"
-              style={{ color: "var(--pure-white)" }}
-            >
-              About
-            </Link>
-            <Link
-              href="#contact"
-              onClick={(e) => handleNavClick(e, "#contact")}
-              className="block font-medium transition-colors hover:opacity-80 cursor-pointer"
-              style={{ color: "var(--pure-white)" }}
-            >
-              Contact
-            </Link>
-            <div className="pt-3 space-y-2 border-t border-purple-900/20">
+          <div className="px-4 py-4 space-y-4 text-white">
+            {["features", "pricing", "about", "contact"].map((item) => (
+              <Link
+                key={item}
+                href={`#${item}`}
+                onClick={(e) => handleNavClick(e, `#${item}`)}
+                className="block font-medium hover:text-purple-300 transition-colors"
+              >
+                {item.charAt(0).toUpperCase() + item.slice(1)}
+              </Link>
+            ))}
+
+            <div className="pt-4 space-y-3 border-t border-purple-900/20">
               <Button
                 variant="outline"
-                className="w-full bg-transparent border-2 transition-all duration-300 hover:bg-purple-700/10 hover:shadow-md"
-                style={{
-                  borderColor: "var(--deep-purple)",
-                  color: "var(--pure-white)",
-                }}
+                className="w-full border-purple-700 bg-transparent text-white hover:bg-purple-800/20"
               >
                 Log In
               </Button>
+
               <Button
                 onClick={handleStartTrial}
-                className="w-full text-white transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50 hover:scale-105 hover:brightness-110 active:scale-95"
-                style={{ backgroundColor: "var(--deep-purple)" }}
+                className="w-full bg-purple-700 text-white hover:brightness-110"
               >
                 Start Free Trial
               </Button>

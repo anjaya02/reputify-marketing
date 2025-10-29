@@ -6,6 +6,8 @@ import {
   Linkedin,
   Youtube,
   MessageCircle,
+  Instagram,
+  Music,
 } from "lucide-react";
 
 const platforms = [
@@ -14,6 +16,8 @@ const platforms = [
   { icon: Linkedin, name: "LinkedIn", color: "text-blue-700" },
   { icon: Youtube, name: "YouTube", color: "text-red-500" },
   { icon: MessageCircle, name: "Reddit", color: "text-orange-500" },
+  { icon: Instagram, name: "Instagram", color: "text-pink-500" },
+  { icon: Music, name: "TikTok", color: "text-black" },
 ];
 
 export default function Platforms() {
@@ -25,7 +29,7 @@ export default function Platforms() {
             Comprehensive Platform Coverage
           </h2>
           <p className="text-lg text-muted-foreground">
-            Monitor reviews across 5 major platforms in one unified dashboard
+            Monitor reviews across 7 major platforms in one unified dashboard
           </p>
         </div>
 
