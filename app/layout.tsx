@@ -34,14 +34,14 @@ export const metadata: Metadata = {
       "Transform your business reputation with AI-powered monitoring and insights",
     url: "/",
     type: "website",
-    images: "/Business Card Design-01.jpg",
+    images: "/Fb Cover.jpg",
   },
   twitter: {
     card: "summary_large_image",
     title: "Reputify - AI Reputation Management for Sri Lankan Businesses",
     description:
       "Transform your business reputation with AI-powered monitoring and insights",
-    images: "/Business Card Design-01.jpg",
+    images: "/Fb Cover.jpg",
   },
   generator: "v0.app",
 };
