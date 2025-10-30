@@ -10,40 +10,33 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://reputify.lk"),
+  metadataBase: new URL("https://reputify-marketing.vercel.app"),
   title: "Reputify - AI Reputation Management for Sri Lankan Businesses",
   description:
-    "AI-powered reputation management platform for Sri Lankan SMEs. Monitor reviews across Google, Facebook, LinkedIn, YouTube, and Reddit in Sinhala, Tamil, and English.",
-  keywords: [
-    "reputation management",
-    "review monitoring",
-    "Sri Lanka",
-    "AI",
-    "sentiment analysis",
-    "business",
-    "SME",
-  ],
-  authors: [{ name: "Team Y3-05" }],
-  icons: {
-    icon: "/Favicon-01.png",
-    apple: "/Favicon-01.png",
-  },
+    "Transform your business reputation with AI-powered monitoring and insights",
   openGraph: {
+    url: "https://reputify-marketing.vercel.app",
+    type: "website",
     title: "Reputify - AI Reputation Management for Sri Lankan Businesses",
     description:
       "Transform your business reputation with AI-powered monitoring and insights",
-    url: "/",
-    type: "website",
-    images: "/Cover.jpg",
+    siteName: "Reputify",
+    images: [
+      {
+        url: "https://reputify-marketing.vercel.app/Cover.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Reputify - AI Reputation Management for Sri Lankan Businesses",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Reputify - AI Reputation Management for Sri Lankan Businesses",
     description:
       "Transform your business reputation with AI-powered monitoring and insights",
-    images: "/Cover.jpg",
+    images: ["https://reputify-marketing.vercel.app/Cover.jpg"],
   },
-  generator: "v0.app",
 };
 
 export default function RootLayout({
