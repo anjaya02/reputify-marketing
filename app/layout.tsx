@@ -13,7 +13,21 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://reputify-marketing.vercel.app"),
   title: "Reputify - AI Reputation Management for Sri Lankan Businesses",
   description:
-    "Transform your business reputation with AI-powered monitoring and insights",
+    "AI-powered reputation management platform for Sri Lankan SMEs. Monitor reviews across Google, Facebook, LinkedIn, YouTube, and Reddit in Sinhala, Tamil, and English.",
+  keywords: [
+    "reputation management",
+    "review monitoring",
+    "Sri Lanka",
+    "AI",
+    "sentiment analysis",
+    "business",
+    "SME",
+  ],
+  authors: [{ name: "Team Y3-05" }],
+  icons: {
+    icon: "/Favicon-01.png",
+    apple: "/Favicon-01.png",
+  },
   openGraph: {
     url: "https://reputify-marketing.vercel.app",
     type: "website",
@@ -37,6 +51,7 @@ export const metadata: Metadata = {
       "Transform your business reputation with AI-powered monitoring and insights",
     images: ["https://reputify-marketing.vercel.app/Cover.jpg"],
   },
+  generator: "v0.app",
 };
 
 export default function RootLayout({
