@@ -31,7 +31,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-black/80 backdrop-blur-lg border-b border-purple-900/20 shadow-lg shadow-purple-900/10">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-5 flex items-center justify-between">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4 flex items-center justify-between">
         {/* Logo */}
         <Link
           href="/"
@@ -41,7 +41,7 @@ export default function Header() {
           <img
             src="/Logo-05.png"
             alt="Reputify Logo"
-            className="h-16 sm:h-20 w-auto"
+            className="h-10 sm:h-12 w-auto"
           />
         </Link>
 

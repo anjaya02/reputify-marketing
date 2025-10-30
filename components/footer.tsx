@@ -15,52 +15,52 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto">
         {/* Logo & CTA Section */}
         <div className="flex flex-col items-center text-center mb-16">
-          <div className="relative mb-6">
-            <div className="absolute inset-0 blur-2xl bg-purple-600 opacity-30"></div>
+          <div className="relative mb-8">
+            <div className="absolute inset-0 blur-3xl bg-purple-600 opacity-25"></div>
             <img
               src="/Logo-04.png"
               alt="Reputify Logo"
-              className="relative h-28 sm:h-32 w-auto"
+              className="relative h-40 sm:h-48 lg:h-56 w-auto object-contain"
               loading="lazy"
             />
           </div>
 
-          <p className="text-lg text-white/80 max-w-xl mb-6">
+          <p className="text-lg lg:text-xl text-white/80 max-w-2xl mb-8">
             Smarter reputation management for Sri Lankan businesses — powered by
             AI.
           </p>
 
           {/* CTA */}
-          <div className="flex gap-4 mb-8">
+          <div className="flex gap-4 mb-10">
             <Link
               href="#pricing"
               onClick={(e) => scrollToId(e, "#pricing")}
-              className="px-5 py-2.5 bg-purple-600 hover:bg-purple-500 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/50 rounded-md transition-all duration-300"
+              className="px-6 py-3 bg-purple-600 hover:bg-purple-500 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/50 rounded-md transition-all duration-300 font-medium"
             >
               Request Demo
             </Link>
             <Link
               href="#contact"
               onClick={(e) => scrollToId(e, "#contact")}
-              className="px-5 py-2.5 border border-white/20 hover:border-purple-400 hover:bg-purple-600/10 hover:scale-105 rounded-md transition-all duration-300"
+              className="px-6 py-3 border border-white/20 hover:border-purple-400 hover:bg-purple-600/10 hover:scale-105 rounded-md transition-all duration-300 font-medium"
             >
               Contact Us
             </Link>
           </div>
 
-          {/* Mini Social Icons */}
-          <div className="flex gap-5">
+          {/* Social Icons */}
+          <div className="flex gap-6">
             <Link
               href="/"
               className="hover:text-purple-400 hover:scale-110 transition-all duration-300"
             >
-              <Linkedin className="w-6 h-6" />
+              <Linkedin className="w-7 h-7" />
             </Link>
             <Link
               href="/"
               className="hover:text-purple-400 hover:scale-110 transition-all duration-300"
             >
-              <Facebook className="w-6 h-6" />
+              <Facebook className="w-7 h-7" />
             </Link>
           </div>
         </div>
