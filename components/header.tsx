@@ -39,9 +39,9 @@ export default function Header() {
           className="flex items-center transition-transform duration-300 hover:scale-105"
         >
           <img
-            src="/Logo-05.png"
+            src="/Logo-06.png"
             alt="Reputify Logo"
-            className="h-10 sm:h-12 w-auto"
+            className="h-12 sm:h-16 w-auto"
           />
         </Link>
 
