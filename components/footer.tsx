@@ -31,18 +31,18 @@ export default function Footer() {
           </p>
 
           {/* CTA */}
-          <div className="flex gap-4 mb-10">
+          <div className="flex flex-col sm:flex-row gap-4 mb-8">
             <Link
               href="#pricing"
               onClick={(e) => scrollToId(e, "#pricing")}
-              className="px-6 py-3 bg-purple-600 hover:bg-purple-500 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/50 rounded-md transition-all duration-300 font-medium"
+              className="px-6 py-3 bg-purple-600 hover:bg-purple-500 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/50 rounded-md transition-all duration-300 font-medium text-center"
             >
               Request Demo
             </Link>
             <Link
               href="#contact"
               onClick={(e) => scrollToId(e, "#contact")}
-              className="px-6 py-3 border border-white/20 hover:border-purple-400 hover:bg-purple-600/10 hover:scale-105 rounded-md transition-all duration-300 font-medium"
+              className="px-6 py-3 border border-white/20 hover:border-purple-400 hover:bg-purple-600/10 hover:scale-105 rounded-md transition-all duration-300 font-medium text-center"
             >
               Contact Us
             </Link>
