@@ -40,8 +40,7 @@ export default function Footer() {
               Request Demo
             </Link>
             <Link
-              href="#contact"
-              onClick={(e) => scrollToId(e, "#contact")}
+              href="mailto:info@reputify.lk"
               className="px-6 py-3 border border-white/20 hover:border-purple-400 hover:bg-purple-600/10 hover:scale-105 rounded-md transition-all duration-300 font-medium text-center"
             >
               Contact Us
