@@ -52,7 +52,15 @@ export async function POST(request: NextRequest) {
         
         <div style="background-color: #ede9fe; padding: 15px; border-radius: 8px; margin-top: 20px;">
           <p style="margin: 0; font-size: 14px; color: #6b46c1;">
-            This email was sent from the Reputify contact form on ${new Date().toLocaleString()}.
+            This email was sent from the Reputify contact form on ${new Date().toLocaleString('en-US', { 
+              timeZone: 'Asia/Colombo',
+              year: 'numeric',
+              month: 'long', 
+              day: 'numeric',
+              hour: '2-digit',
+              minute: '2-digit',
+              hour12: true
+            })}, Sri Lankan Time.
           </p>
         </div>
       </div>
