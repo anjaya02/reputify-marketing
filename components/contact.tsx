@@ -16,6 +16,7 @@ export default function Contact() {
   });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -24,27 +25,50 @@ export default function Contact() {
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+    // Clear error when user starts typing
+    if (error) setError(null);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
+    setError(null);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-    setSubmitted(true);
-    setLoading(false);
-    setFormData({
-      name: "",
-      businessType: "",
-      email: "",
-      phone: "",
-      message: "",
-    });
+      const data = await response.json();
 
-    // Reset success message after 5 seconds
-    setTimeout(() => setSubmitted(false), 5000);
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to send message");
+      }
+
+      setSubmitted(true);
+      setFormData({
+        name: "",
+        businessType: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+
+      // Reset success message after 7 seconds
+      setTimeout(() => setSubmitted(false), 7000);
+    } catch (err) {
+      setError(
+        err instanceof Error
+          ? err.message
+          : "Something went wrong. Please try again."
+      );
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -306,11 +330,44 @@ export default function Contact() {
 
               <Button
                 type="submit"
-                disabled={loading}
-                className="w-full text-white font-medium py-2 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25 hover:scale-105 disabled:hover:scale-100 disabled:hover:shadow-none"
+                disabled={
+                  loading ||
+                  !formData.name ||
+                  !formData.businessType ||
+                  !formData.email ||
+                  !formData.message ||
+                  formData.message.length < 5
+                }
+                className="w-full text-white font-medium py-2 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25 hover:scale-105 disabled:hover:scale-100 disabled:hover:shadow-none disabled:opacity-50 disabled:cursor-not-allowed"
                 style={{ backgroundColor: "var(--deep-purple)" }}
               >
-                {loading ? "Sending..." : "Send Message"}
+                {loading ? (
+                  <span className="flex items-center justify-center">
+                    <svg
+                      className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle
+                        className="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        strokeWidth="4"
+                      ></circle>
+                      <path
+                        className="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                      ></path>
+                    </svg>
+                    Sending...
+                  </span>
+                ) : (
+                  "Send Message"
+                )}
               </Button>
 
               {submitted && (
@@ -318,12 +375,25 @@ export default function Contact() {
                   className="p-4 rounded-lg border-2 border-green-200"
                   style={{
                     backgroundColor: "rgba(16, 185, 129, 0.1)",
-                    color: "var(--success)",
+                    color: "#10b981",
                   }}
                 >
                   <p className="font-medium">
-                    Thank you! We'll get back to you soon.
+                    Thank you! Your message has been sent successfully. We'll
+                    get back to you within 24 hours.
                   </p>
+                </div>
+              )}
+
+              {error && (
+                <div
+                  className="p-4 rounded-lg border-2 border-red-200"
+                  style={{
+                    backgroundColor: "rgba(239, 68, 68, 0.1)",
+                    color: "#ef4444",
+                  }}
+                >
+                  <p className="font-medium">{error}</p>
                 </div>
               )}
             </form>
