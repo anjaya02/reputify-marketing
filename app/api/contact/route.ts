@@ -63,7 +63,7 @@ export async function POST(request: NextRequest) {
                 minute: "2-digit",
                 hour12: true,
               }
-            )}.
+            )}
           </p>
         </div>
       </div>
