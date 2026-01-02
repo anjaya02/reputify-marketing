@@ -213,7 +213,7 @@ export default function Footer() {
 
         {/* Divider */}
         <div className="border-t border-white/10 pt-6 text-center text-xs text-white/60">
-          © 2025 Reputify — All rights reserved.
+          © 2026 Reputify — All rights reserved.
         </div>
       </div>
     </footer>
