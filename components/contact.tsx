@@ -107,9 +107,13 @@ export default function Contact() {
             >
               Email
             </h3>
-            <p className="text-sm" style={{ color: "var(--light-gray)" }}>
+            <a
+              href="mailto:info@reputify.lk"
+              className="text-sm hover:text-purple-400 transition-colors"
+              style={{ color: "var(--light-gray)" }}
+            >
               info@reputify.lk
-            </p>
+            </a>
           </div>
 
           <div className="p-6 rounded-lg border-2 border-purple-600/50 bg-gray-900/50 backdrop-blur hover:bg-gray-800/50 transition-all">

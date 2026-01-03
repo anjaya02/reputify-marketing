@@ -1,13 +1,12 @@
 "use client";
 
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import FreeTrialModal from "@/components/free-trial-modal";
 
 export default function Hero() {
-  const handleStartTrial = () => {
-    const pricingSection = document.getElementById("pricing");
-    pricingSection?.scrollIntoView({ behavior: "smooth" });
-  };
+  const [showTrialModal, setShowTrialModal] = useState(false);
 
   return (
     <>
@@ -46,7 +45,7 @@ export default function Hero() {
           <div className="flex justify-center">
             <Button
               size="lg"
-              onClick={handleStartTrial}
+              onClick={() => setShowTrialModal(true)}
               className="group text-white gap-2 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50 hover:scale-105 hover:brightness-110 active:scale-95"
               style={{ backgroundColor: "var(--deep-purple)" }}
             >
@@ -56,6 +55,11 @@ export default function Hero() {
           </div>
         </div>
       </section>
+
+      <FreeTrialModal
+        open={showTrialModal}
+        onClose={() => setShowTrialModal(false)}
+      />
     </>
   );
 }

@@ -3,6 +3,7 @@
 import { Check, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import FreeTrialModal from "@/components/free-trial-modal";
 
 const plans = [
   {
@@ -115,255 +116,264 @@ const comparisonFeatures = [
 
 export default function Pricing() {
   const [showComparison, setShowComparison] = useState(false);
+  const [showTrialModal, setShowTrialModal] = useState(false);
 
   return (
-    <section id="pricing" className="py-12 md:py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2
-            className="text-3xl md:text-5xl font-bold mb-4 text-balance"
-            style={{ color: "var(--pure-white)" }}
-          >
-            Choose Your Plan
-          </h2>
-          <p
-            className="text-lg max-w-2xl mx-auto"
-            style={{ color: "var(--light-gray)" }}
-          >
-            All plans include free 14-day trial, no credit card required, and
-            cancel anytime
-          </p>
-        </div>
-
-        {/* Pricing Cards */}
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {plans.map((plan, index) => (
-            <div
-              key={index}
-              className={`rounded-lg border-2 transition-all duration-300 p-8 ${
-                plan.highlighted ? "scale-105 shadow-lg" : "hover:shadow-md"
-              }`}
-              style={{
-                borderColor: plan.highlighted
-                  ? "var(--deep-purple)"
-                  : "rgba(114, 14, 158, 0.5)",
-                backgroundColor: plan.highlighted
-                  ? "rgba(114, 14, 158, 0.2)"
-                  : "rgba(17, 24, 39, 0.5)",
-              }}
+    <>
+      <section id="pricing" className="py-12 md:py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2
+              className="text-3xl md:text-5xl font-bold mb-4 text-balance"
+              style={{ color: "var(--pure-white)" }}
             >
-              {plan.highlighted && (
-                <div
-                  className="inline-block mb-4 px-3 py-1 text-xs font-bold rounded-full text-white"
-                  style={{ backgroundColor: "var(--deep-purple)" }}
-                >
-                  MOST POPULAR
-                </div>
-              )}
-              <h3
-                className="text-2xl font-bold mb-2"
-                style={{ color: "var(--pure-white)" }}
-              >
-                {plan.name}
-              </h3>
-              <p
-                className="text-sm mb-6"
-                style={{ color: "var(--light-gray)" }}
-              >
-                {plan.description}
-              </p>
+              Choose Your Plan
+            </h2>
+            <p
+              className="text-lg max-w-2xl mx-auto"
+              style={{ color: "var(--light-gray)" }}
+            >
+              All plans include free 14-day trial, no credit card required, and
+              cancel anytime
+            </p>
+          </div>
 
-              <div className="mb-6">
-                <span
-                  className="text-4xl font-bold"
-                  style={{ color: "var(--pure-white)" }}
-                >
-                  LKR {plan.price}
-                </span>
-                <span style={{ color: "var(--light-gray)" }}>/month</span>
-              </div>
-
-              <Button
-                className={`w-full mb-8 text-white transition-all duration-300 hover:scale-105 hover:shadow-lg hover:brightness-110 active:scale-95 ${
-                  plan.highlighted
-                    ? "hover:shadow-purple-500/50"
-                    : "border-2 hover:bg-purple-700/10"
+          {/* Pricing Cards */}
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            {plans.map((plan, index) => (
+              <div
+                key={index}
+                className={`rounded-lg border-2 transition-all duration-300 p-8 ${
+                  plan.highlighted ? "scale-105 shadow-lg" : "hover:shadow-md"
                 }`}
                 style={{
-                  backgroundColor: plan.highlighted
-                    ? "var(--deep-purple)"
-                    : "transparent",
                   borderColor: plan.highlighted
-                    ? "transparent"
-                    : "var(--deep-purple)",
-                  color: plan.highlighted ? "white" : "var(--deep-purple)",
+                    ? "var(--deep-purple)"
+                    : "rgba(114, 14, 158, 0.5)",
+                  backgroundColor: plan.highlighted
+                    ? "rgba(114, 14, 158, 0.2)"
+                    : "rgba(17, 24, 39, 0.5)",
                 }}
               >
-                Start Free Trial
-              </Button>
-
-              <div className="space-y-4">
-                {plan.features.map((feature, idx) => (
-                  <div key={idx} className="flex items-start gap-3">
-                    <Check
-                      className="w-5 h-5 flex-shrink-0 mt-0.5"
-                      style={{ color: "var(--success)" }}
-                    />
-                    <span
-                      className="text-sm"
-                      style={{ color: "var(--pure-white)" }}
-                    >
-                      {feature}
-                    </span>
+                {plan.highlighted && (
+                  <div
+                    className="inline-block mb-4 px-3 py-1 text-xs font-bold rounded-full text-white"
+                    style={{ backgroundColor: "var(--deep-purple)" }}
+                  >
+                    MOST POPULAR
                   </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Trial Info */}
-        <div className="text-center mb-12">
-          <p style={{ color: "var(--light-gray)" }}>
-            Free 14-day trial • No credit card required • Cancel anytime • Full
-            access to all features
-          </p>
-        </div>
-
-        {/* Comparison Table Toggle */}
-        <div className="text-center mb-8">
-          <button
-            onClick={() => setShowComparison(!showComparison)}
-            className="font-medium transition-colors hover:opacity-80 px-4 py-2 border rounded-lg hover:bg-gray-800/50 cursor-pointer"
-            style={{
-              color: "var(--pure-white)",
-              borderColor: "var(--deep-purple)",
-              backgroundColor: "rgba(17, 24, 39, 0.3)",
-            }}
-            type="button"
-          >
-            {showComparison ? "Hide" : "Show"} Detailed Comparison
-          </button>
-        </div>
-
-        {/* Comparison Table */}
-        {showComparison && (
-          <div
-            className="overflow-x-auto rounded-lg border-2"
-            style={{
-              borderColor: "var(--deep-purple) !important",
-              borderWidth: "2px !important",
-              borderStyle: "solid !important",
-            }}
-          >
-            <table className="w-full bg-gray-900/50 backdrop-blur">
-              <thead>
-                <tr
-                  className="border-b-2 border-gray-700"
-                  style={{ backgroundColor: "rgba(17, 24, 39, 0.7)" }}
+                )}
+                <h3
+                  className="text-2xl font-bold mb-2"
+                  style={{ color: "var(--pure-white)" }}
                 >
-                  <th
-                    className="px-6 py-4 text-left font-bold"
+                  {plan.name}
+                </h3>
+                <p
+                  className="text-sm mb-6"
+                  style={{ color: "var(--light-gray)" }}
+                >
+                  {plan.description}
+                </p>
+
+                <div className="mb-6">
+                  <span
+                    className="text-4xl font-bold"
                     style={{ color: "var(--pure-white)" }}
                   >
-                    Feature
-                  </th>
-                  <th
-                    className="px-6 py-4 text-center font-bold"
-                    style={{ color: "var(--pure-white)" }}
-                  >
-                    Starter
-                  </th>
-                  <th
-                    className="px-6 py-4 text-center font-bold"
-                    style={{ color: "var(--pure-white)" }}
-                  >
-                    Professional
-                  </th>
-                  <th
-                    className="px-6 py-4 text-center font-bold"
-                    style={{ color: "var(--pure-white)" }}
-                  >
-                    Business
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {comparisonFeatures.map((feature, index) => (
+                    LKR {plan.price}
+                  </span>
+                  <span style={{ color: "var(--light-gray)" }}>/month</span>
+                </div>
+
+                <Button
+                  onClick={() => setShowTrialModal(true)}
+                  className={`w-full mb-8 text-white transition-all duration-300 hover:scale-105 hover:shadow-lg hover:brightness-110 active:scale-95 ${
+                    plan.highlighted
+                      ? "hover:shadow-purple-500/50"
+                      : "border-2 hover:bg-purple-700/10"
+                  }`}
+                  style={{
+                    backgroundColor: plan.highlighted
+                      ? "var(--deep-purple)"
+                      : "transparent",
+                    borderColor: plan.highlighted
+                      ? "transparent"
+                      : "var(--deep-purple)",
+                    color: plan.highlighted ? "white" : "var(--deep-purple)",
+                  }}
+                >
+                  Start Free Trial
+                </Button>
+
+                <div className="space-y-4">
+                  {plan.features.map((feature, idx) => (
+                    <div key={idx} className="flex items-start gap-3">
+                      <Check
+                        className="w-5 h-5 flex-shrink-0 mt-0.5"
+                        style={{ color: "var(--success)" }}
+                      />
+                      <span
+                        className="text-sm"
+                        style={{ color: "var(--pure-white)" }}
+                      >
+                        {feature}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Trial Info */}
+          <div className="text-center mb-12">
+            <p style={{ color: "var(--light-gray)" }}>
+              Free 14-day trial • No credit card required • Cancel anytime •
+              Full access to all features
+            </p>
+          </div>
+
+          {/* Comparison Table Toggle */}
+          <div className="text-center mb-8">
+            <button
+              onClick={() => setShowComparison(!showComparison)}
+              className="font-medium transition-colors hover:opacity-80 px-4 py-2 border rounded-lg hover:bg-gray-800/50 cursor-pointer"
+              style={{
+                color: "var(--pure-white)",
+                borderColor: "var(--deep-purple)",
+                backgroundColor: "rgba(17, 24, 39, 0.3)",
+              }}
+              type="button"
+            >
+              {showComparison ? "Hide" : "Show"} Detailed Comparison
+            </button>
+          </div>
+
+          {/* Comparison Table */}
+          {showComparison && (
+            <div
+              className="overflow-x-auto rounded-lg border-2"
+              style={{
+                borderColor: "var(--deep-purple) !important",
+                borderWidth: "2px !important",
+                borderStyle: "solid !important",
+              }}
+            >
+              <table className="w-full bg-gray-900/50 backdrop-blur">
+                <thead>
                   <tr
-                    key={index}
-                    className="border-b border-gray-700 hover:bg-gray-800/30 transition-all"
+                    className="border-b-2 border-gray-700"
+                    style={{ backgroundColor: "rgba(17, 24, 39, 0.7)" }}
                   >
-                    <td
-                      className="px-6 py-4 font-medium"
+                    <th
+                      className="px-6 py-4 text-left font-bold"
                       style={{ color: "var(--pure-white)" }}
                     >
-                      {feature.name}
-                    </td>
-                    <td className="px-6 py-4 text-center">
-                      {typeof feature.starter === "boolean" ? (
-                        feature.starter ? (
-                          <Check
-                            className="w-5 h-5 mx-auto"
-                            style={{ color: "var(--success)" }}
-                          />
-                        ) : (
-                          <X
-                            className="w-5 h-5 mx-auto"
-                            style={{ color: "var(--light-gray)" }}
-                          />
-                        )
-                      ) : (
-                        <span style={{ color: "var(--light-gray)" }}>
-                          {feature.starter}
-                        </span>
-                      )}
-                    </td>
-                    <td className="px-6 py-4 text-center">
-                      {typeof feature.professional === "boolean" ? (
-                        feature.professional ? (
-                          <Check
-                            className="w-5 h-5 mx-auto"
-                            style={{ color: "var(--success)" }}
-                          />
-                        ) : (
-                          <X
-                            className="w-5 h-5 mx-auto"
-                            style={{ color: "var(--light-gray)" }}
-                          />
-                        )
-                      ) : (
-                        <span style={{ color: "var(--light-gray)" }}>
-                          {feature.professional}
-                        </span>
-                      )}
-                    </td>
-                    <td className="px-6 py-4 text-center">
-                      {typeof feature.business === "boolean" ? (
-                        feature.business ? (
-                          <Check
-                            className="w-5 h-5 mx-auto"
-                            style={{ color: "var(--success)" }}
-                          />
-                        ) : (
-                          <X
-                            className="w-5 h-5 mx-auto"
-                            style={{ color: "var(--light-gray)" }}
-                          />
-                        )
-                      ) : (
-                        <span style={{ color: "var(--light-gray)" }}>
-                          {feature.business}
-                        </span>
-                      )}
-                    </td>
+                      Feature
+                    </th>
+                    <th
+                      className="px-6 py-4 text-center font-bold"
+                      style={{ color: "var(--pure-white)" }}
+                    >
+                      Starter
+                    </th>
+                    <th
+                      className="px-6 py-4 text-center font-bold"
+                      style={{ color: "var(--pure-white)" }}
+                    >
+                      Professional
+                    </th>
+                    <th
+                      className="px-6 py-4 text-center font-bold"
+                      style={{ color: "var(--pure-white)" }}
+                    >
+                      Business
+                    </th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        )}
-      </div>
-    </section>
+                </thead>
+                <tbody>
+                  {comparisonFeatures.map((feature, index) => (
+                    <tr
+                      key={index}
+                      className="border-b border-gray-700 hover:bg-gray-800/30 transition-all"
+                    >
+                      <td
+                        className="px-6 py-4 font-medium"
+                        style={{ color: "var(--pure-white)" }}
+                      >
+                        {feature.name}
+                      </td>
+                      <td className="px-6 py-4 text-center">
+                        {typeof feature.starter === "boolean" ? (
+                          feature.starter ? (
+                            <Check
+                              className="w-5 h-5 mx-auto"
+                              style={{ color: "var(--success)" }}
+                            />
+                          ) : (
+                            <X
+                              className="w-5 h-5 mx-auto"
+                              style={{ color: "var(--light-gray)" }}
+                            />
+                          )
+                        ) : (
+                          <span style={{ color: "var(--light-gray)" }}>
+                            {feature.starter}
+                          </span>
+                        )}
+                      </td>
+                      <td className="px-6 py-4 text-center">
+                        {typeof feature.professional === "boolean" ? (
+                          feature.professional ? (
+                            <Check
+                              className="w-5 h-5 mx-auto"
+                              style={{ color: "var(--success)" }}
+                            />
+                          ) : (
+                            <X
+                              className="w-5 h-5 mx-auto"
+                              style={{ color: "var(--light-gray)" }}
+                            />
+                          )
+                        ) : (
+                          <span style={{ color: "var(--light-gray)" }}>
+                            {feature.professional}
+                          </span>
+                        )}
+                      </td>
+                      <td className="px-6 py-4 text-center">
+                        {typeof feature.business === "boolean" ? (
+                          feature.business ? (
+                            <Check
+                              className="w-5 h-5 mx-auto"
+                              style={{ color: "var(--success)" }}
+                            />
+                          ) : (
+                            <X
+                              className="w-5 h-5 mx-auto"
+                              style={{ color: "var(--light-gray)" }}
+                            />
+                          )
+                        ) : (
+                          <span style={{ color: "var(--light-gray)" }}>
+                            {feature.business}
+                          </span>
+                        )}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </div>
+      </section>
+
+      <FreeTrialModal
+        open={showTrialModal}
+        onClose={() => setShowTrialModal(false)}
+      />
+    </>
   );
 }

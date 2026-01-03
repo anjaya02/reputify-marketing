@@ -11,64 +11,10 @@ export default function Footer() {
   };
 
   return (
-    <footer className="py-20 px-4 sm:px-6 lg:px-8 text-white bg-gradient-to-br from-[#0f0f23] to-[#1a0b2e]">
-      <div className="max-w-7xl mx-auto">
-        {/* Logo & CTA Section */}
-        <div className="flex flex-col items-center text-center mb-16">
-          <div className="relative mb-8">
-            <div className="absolute inset-0 blur-3xl bg-purple-600 opacity-25"></div>
-            <img
-              src="/Logo-04.png"
-              alt="Reputify Logo"
-              className="relative h-40 sm:h-48 lg:h-56 w-auto object-contain"
-              loading="lazy"
-            />
-          </div>
-
-          <p className="text-lg lg:text-xl text-white/80 max-w-2xl mb-8">
-            Smarter reputation management for Sri Lankan businesses — powered by
-            AI.
-          </p>
-
-          {/* CTA */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-8">
-            <Link
-              href="#pricing"
-              onClick={(e) => scrollToId(e, "#pricing")}
-              className="px-6 py-3 bg-purple-600 hover:bg-purple-500 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/50 rounded-md transition-all duration-300 font-medium text-center"
-            >
-              Request Demo
-            </Link>
-            <Link
-              href="mailto:info@reputify.lk"
-              className="px-6 py-3 border border-white/20 hover:border-purple-400 hover:bg-purple-600/10 hover:scale-105 rounded-md transition-all duration-300 font-medium text-center"
-            >
-              Contact Us
-            </Link>
-          </div>
-
-          {/* Social Icons */}
-          <div className="flex gap-6">
-            <Link
-              href="/"
-              className="hover:text-purple-400 hover:scale-110 transition-all duration-300"
-            >
-              <Linkedin className="w-7 h-7" />
-            </Link>
-            <Link
-              href="/"
-              className="hover:text-purple-400 hover:scale-110 transition-all duration-300"
-            >
-              <Facebook className="w-7 h-7" />
-            </Link>
-          </div>
-        </div>
-
-        {/* Divider */}
-        <div className="border-t border-white/10 my-12"></div>
-
+    <footer className="py-16 px-4 sm:px-6 lg:px-8 text-white bg-gradient-to-br from-[#0f0f23] to-[#1a0b2e]">
+      <div className="max-w-5xl mx-auto">
         {/* Links Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-12 text-sm">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-10 mb-12 text-sm">
           <div>
             <h4 className="font-semibold mb-4 text-white">Product</h4>
             <ul className="space-y-3 text-white/70">
@@ -92,94 +38,33 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/"
-                  className="hover:text-purple-400 hover:translate-x-1 inline-block transition-all duration-300"
-                >
-                  Security
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/"
-                  className="hover:text-purple-400 hover:translate-x-1 inline-block transition-all duration-300"
-                >
-                  API Docs
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-semibold mb-4 text-white">Company</h4>
-            <ul className="space-y-3 text-white/70">
-              <li>
-                <Link
-                  href="/"
+                  href="#about"
+                  onClick={(e) => scrollToId(e, "#about")}
                   className="hover:text-purple-400 hover:translate-x-1 inline-block transition-all duration-300"
                 >
                   About Us
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/"
-                  className="hover:text-purple-400 hover:translate-x-1 inline-block transition-all duration-300"
-                >
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/"
-                  className="hover:text-purple-400 hover:translate-x-1 inline-block transition-all duration-300"
-                >
-                  Careers
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/"
-                  className="hover:text-purple-400 hover:translate-x-1 inline-block transition-all duration-300"
-                >
-                  Press
-                </Link>
-              </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4 text-white">Resources</h4>
+            <h4 className="font-semibold mb-4 text-white">Legal</h4>
             <ul className="space-y-3 text-white/70">
               <li>
                 <Link
-                  href="/"
+                  href="/privacy"
                   className="hover:text-purple-400 hover:translate-x-1 inline-block transition-all duration-300"
                 >
-                  Help Center
+                  Privacy Policy
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/"
+                  href="/terms"
                   className="hover:text-purple-400 hover:translate-x-1 inline-block transition-all duration-300"
                 >
-                  Community
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/"
-                  className="hover:text-purple-400 hover:translate-x-1 inline-block transition-all duration-300"
-                >
-                  Status
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/"
-                  className="hover:text-purple-400 hover:translate-x-1 inline-block transition-all duration-300"
-                >
-                  Changelog
+                  Terms of Service
                 </Link>
               </li>
             </ul>
@@ -206,14 +91,32 @@ export default function Footer() {
                   +94 711 687 980
                 </a>
               </li>
-              <li className="text-xs text-white/60">Colombo, Sri Lanka</li>
+              <li className="text-xs text-white/60">
+                Reputify HQ, Homagama, Sri Lanka
+              </li>
             </ul>
           </div>
         </div>
 
         {/* Divider */}
-        <div className="border-t border-white/10 pt-6 text-center text-xs text-white/60">
-          © 2026 Reputify — All rights reserved.
+        <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex gap-5">
+            <Link
+              href="/"
+              className="text-white/60 hover:text-purple-400 hover:scale-110 transition-all duration-300"
+            >
+              <Linkedin className="w-5 h-5" />
+            </Link>
+            <Link
+              href="/"
+              className="text-white/60 hover:text-purple-400 hover:scale-110 transition-all duration-300"
+            >
+              <Facebook className="w-5 h-5" />
+            </Link>
+          </div>
+          <p className="text-xs text-white/60">
+            © 2026 Reputify — All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
