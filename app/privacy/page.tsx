@@ -852,10 +852,10 @@ export default function PrivacyPolicy() {
                 <p>
                   Website:{" "}
                   <a
-                    href="https://reputify.lk"
+                    href="https://marketing.reputify.lk"
                     className="text-purple-400 hover:text-purple-300"
                   >
-                    https://reputify.lk
+                    https://marketing.reputify.lk
                   </a>
                 </p>
               </div>
