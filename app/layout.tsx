@@ -51,7 +51,6 @@ export const metadata: Metadata = {
       "Transform your business reputation with AI-powered monitoring and insights",
     images: ["https://marketing.reputify.lk/Cover.jpg"],
   },
-  generator: "v0.app",
 };
 
 export default function RootLayout({
