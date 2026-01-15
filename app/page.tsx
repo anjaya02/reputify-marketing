@@ -26,7 +26,6 @@ export default function Home() {
           backgroundAttachment: "fixed",
         }}
       />
-      {/* Your Content/Components */}
       <main className="relative z-10">
         <Header />
         <Hero />
